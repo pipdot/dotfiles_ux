@@ -1,0 +1,9 @@
+#!/bin/sh
+# Script to be used as a proxy for .desktop entries
+# we can't use env vars inside the Exec field,
+# so we launch them using this wrapper script instead.
+
+# needs the $TERMINAL_RUN_COMMAND to be set, should be done in .profile_exports
+# echo $TERMINAL_RUN_COMMAND "$@"
+# IMPORTANT: .desktop files do not like for "tmux new" to be quoted
+exec $TERMINAL_RUN_COMMAND tmux new "$@"

@@ -1,0 +1,8 @@
+set $screenshotdir "$HOME/screenshots"
+# Screenshots with grim and slurp
+# see: https://bytee.net/blog/screenshots-with-sway-and-grim
+# Take a screenshot with all output and save it into screenshots
+bindsym Print exec mkdir -p $screenshotdir && grim $screenshotdir/$(date +%Y-%m-%d_%H-%m-%s).png
+#
+# # Take a Screenshot with the region select
+bindsym $mod+Print exec mkdir -p $screenshotdir && grim -g "$(slurp)" $screenshotdir/$(date +%Y-%m-%d_%H-%m-%s).png

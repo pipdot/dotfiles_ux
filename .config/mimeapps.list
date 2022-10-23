@@ -1,0 +1,14 @@
+# xdg-open will use these settings to determine how to open filetypes.
+# These .desktop entries can also be seen and changed in ~/.local/share/applications/
+
+[Default Applications]
+inode/directory=Thunar.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+application/pdf=firefox.desktop
+image/png=swayimg.desktop
+image/jpeg=swayimg.desktop
+x-scheme-handler/about=firefox.desktop
+x-scheme-handler/unknown=firefox.desktop
+application/x-sfz=mscore.desktop;
+text/plain=vim.desktop;

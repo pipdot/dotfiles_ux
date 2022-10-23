@@ -1,0 +1,17 @@
+[Desktop Entry]
+# TODO: currently no portable way to set the terminal emulator
+# see: https://github.com/FreeSlave/desktopfile
+# so we use our own executable from set in .local/bin
+TryExec=ranger
+Exec=launch_in_terminal_tmux ranger %F
+# Set Terminal=False to test it through 'dex' command
+Terminal=true
+Type=Application
+# Translators: This is the Application Name used in the Vim desktop file
+Name=ranger
+Comment=Launches the ranger file manager
+Icon=utilities-terminal
+#-c ranger
+Categories=ConsoleOnly;System;FileTools;FileManager
+MimeType=inode/directory;
+Keywords=File;Manager;Browser;Explorer;Launcher;

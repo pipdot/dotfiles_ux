@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# see: https://old.reddit.com/r/swaywm/comments/pe5ipl/workspace_next_or_new/hb0hekr/
+count=1
+for workspace in $(swaymsg -t get_workspaces -r | jq '. | sort_by(.num)[] | .name'); do
+  swaymsg rename workspace $workspace to $count
+    ((count+=1))
+done
+

@@ -1,0 +1,48 @@
+{
+	"segments": {
+		"right": [
+			{
+				"function": "powerline.segments.common.net.network_manager",
+				"name": "net_manager"
+			},
+			{
+				"function": "powerline.segments.common.players.mpd"
+			},
+			{
+				"function": "powerline.segments.common.volume.vol"
+			},
+			{
+				"function": "powerline.segments.common.env.clip"
+			},
+			{
+				"function": "powerline.segments.common.sys.memory_usage",
+				"name": "mem_usage",
+				"args": {
+					"format": "RAM {percent:.1f}% {absolute:.1f}G/{total:.1f}G"
+				}
+			},
+			{
+				"function": "powerline.segments.common.sys.cpu_load_percent",
+				"name": "cpu_load",
+				"args": {
+					"format": "CPU {0:.0f}%"
+				}
+			},
+			{
+				"function": "powerline.segments.common.sys.temp",
+				"name": "temp"
+			},
+			{
+				"function": "powerline.segments.common.time.date"
+			},
+			{
+				"function": "powerline.segments.common.time.date",
+				"name": "time",
+				"args": {
+					"format": "%H:%M",
+					"istime": true
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,20 @@
+# Plug-ins
+# shell cmus-bundler plugin ...
+shell cmus-bundler start
+
+# colourschemes
+shell cmus-bundler theme alextercete/cmus-theme-screenshot
+
+# cover-art
+# shell cmus-bundler plugin nogizhopaboroda/cmus-cover-art cmd "sh install.sh"
+# shell cmus-bundler status_program cmus-cover-art/observe.sh
+
+#cmus-remote web app
+shell cmus-bundler plugin ichier/cmus_app
+
+# media keys
+shell cmus-bundler plugin nogizhopaboroda/cmus-mediakeys cmd "npm install"
+shell cmus-bundler call cmus-mediakeys/mediakeys
+
+# set cmus-bundler as status program
+set status_display_program=cmus-bundler

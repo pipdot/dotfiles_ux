@@ -1,0 +1,23 @@
+mappings:
+  - match: .bash(\w)*
+    target_os:
+      - "Linux"
+      - "Darwin"
+
+modules:
+  # other useful stuff
+  - repo: git@github.com:tmux-plugins/tpm.git
+    pull_only: true
+    link: none
+    location: ~/.config/tmux/plugins/tpm
+    name: tpm
+  - repo: git@github.com:junegunn/vim-plug.git
+    pull_only: true
+    link: post
+    mappings:
+      # skip everything else
+      - match: '.*'
+        skip: true
+      - match: '\/plug\.vim$'
+        target_dir: ~/.config/vim/autoload/
+    name: vim-plug

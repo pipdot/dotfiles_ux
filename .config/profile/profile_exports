@@ -1,0 +1,45 @@
+#!/bin/sh
+
+# Environment variables -----------------------------------------------
+# tmux overwrites this value and won't work otherwise.
+# So we instead use a non-standard TERMINAL value
+# just so that we can know we are running tmux inside alacritty.
+# This value is used in my own desktop entries .local/share/applications/*.
+# It defaults to $TERM if we're not in alacritty
+# see .config/alacritty/alacritty.yml
+export TERMINAL=${TERMINAL:-$TERM}
+terminal_name=$(echo $TERMINAL | cut -d'-' -f1)
+# TODO
+terminal_color_mode=$(echo $TERMINAL | cut -d'-' -s -f2)
+# find the appropriate 'run programme in that terminal' command:
+case $terminal_name in
+ alacritty)
+   terminal_run_command="$TERMINAL -e"
+esac
+export TERMINAL_RUN_COMMAND=${terminal_run_command:-$TERMINAL}
+#
+export EDITOR=vim
+export HISTCONTROL=ignoreboth
+# 16 KiL
+export HISTSIZE=16384
+
+# move vim's stuff out of $HOME
+# see: https://tlvince.com/vim-respect-xdg
+# and: https://blog.joren.ga/vim-xdg
+# move vimrc to ~/.config/vim/vimrc and redirect vim to it at launch.
+# export VIMINIT='let $MYVIMRC="${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc" | source $MYVIMRC'
+export VIMINIT="set nocp | source ${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc"
+
+# local binaries
+export PATH="$HOME/.local/bin:$PATH"
+# --------------------------------------------------------------------
+# get powerline-status pip package install folder
+# pip_root=$(pip show powerline-status | awk -F': ' '/Location: /{print $2}')
+pip_root=$(pip show powerline-status | grep -Po 'Location: \K.*')
+export POWERLINE_ROOT=$pip_root/powerline
+# --------------------------------------------------------------------
+FZF_DEFAULT_COMMAND='fd --type f'
+FZF_DEFAULT_OPTS=''
+
+# --------------------------------------------------------------------
+# vem: ft=sh :

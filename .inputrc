@@ -1,0 +1,6 @@
+# .inputrc
+
+# see: https://github.com/scop/bash-completion
+set show-all-if-ambiguous on
+set visible-stats on
+set page-completions off
