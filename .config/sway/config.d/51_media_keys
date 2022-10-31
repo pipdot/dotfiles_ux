@@ -6,3 +6,9 @@ bindsym Print exec mkdir -p $screenshotdir && grim $screenshotdir/$(date +%Y-%m-
 #
 # # Take a Screenshot with the region select
 bindsym $mod+Print exec mkdir -p $screenshotdir && grim -g "$(slurp)" $screenshotdir/$(date +%Y-%m-%d_%H-%m-%s).png
+
+# Volume control
+# from: https://reddit.com/r/swaywm/comments/qei3oh/how_can_i_set_up_keybindgs_with_sway_for_volume/hhtvsen/
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
