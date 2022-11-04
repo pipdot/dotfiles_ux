@@ -32,6 +32,8 @@ export VIMINIT="set nocp | source ${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc"
 
 # local binaries
 export PATH="$HOME/.local/bin:$PATH"
+# runit user services
+export SVDIR="$HOME/.var/service"
 # --------------------------------------------------------------------
 # get powerline-status pip package install folder
 # pip_root=$(pip show powerline-status | awk -F': ' '/Location: /{print $2}')
