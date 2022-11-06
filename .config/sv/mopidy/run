@@ -5,10 +5,7 @@
 [ -r ./conf ] && . ./conf
 
 # TODO logging
-if [ "${LOGGING_ENABLE}x" = "1x" -a -n "${LOG_LEVEL}" ]; then
-		exec mopidy ${OPTS:-} 2>&1
-else
-		exec mopidy ${OPTS:-} 2>&1
-fi
+# exec "mopidy ${OPTS:-} local scan" 2>&1
+exec mopidy ${OPTS:-} 2>&1
 
 
