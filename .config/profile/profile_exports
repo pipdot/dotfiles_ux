@@ -36,7 +36,9 @@ export PATH="$HOME/.local/bin:$PATH"
 # get powerline-status pip package install folder
 # pip_root=$(pip show powerline-status | awk -F': ' '/Location: /{print $2}')
 pip_root=$(pip show powerline-status | grep -Po 'Location: \K.*')
-export POWERLINE_ROOT=$pip_root/powerline
+if ! [ -z $pip_root ]; then
+  export POWERLINE_ROOT="$pip_root/powerline"
+fi
 # --------------------------------------------------------------------
 FZF_DEFAULT_COMMAND='fd --type f'
 FZF_DEFAULT_OPTS=''

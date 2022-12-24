@@ -1,0 +1,5 @@
+# requirements.in
+# see: https://stackoverflow.com/a/65666949
+powerline-status
+i3ipc
+
