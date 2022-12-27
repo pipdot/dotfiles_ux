@@ -7,6 +7,18 @@ bindsym Print exec mkdir -p $screenshotdir && grim $screenshotdir/$(date +%Y-%m-
 # # Take a Screenshot with the region select
 bindsym $mod+Print exec mkdir -p $screenshotdir && grim -g "$(slurp)" $screenshotdir/$(date +%Y-%m-%d_%H-%m-%s).png
 
+# Backlight control using 'light'
+# from: https://askubuntu.com/a/1252278
+# from: reddit.com/r/swaywm/comments/ob4ceu/comment/h3oa7e3/?utm_source=share&utm_medium=web2x&context=3
+set $lightincr 5
+exec light -N 5
+exec light -I
+bindsym XF86MonBrightnessUp   exec "light -A $lightincr && light -0"
+bindsym XF86MonBrightnessDown exec "light -U $lightincr && light -0"
+# keyboard backlight (on-off)
+bindsym XF86KbdBrightnessUp   exec "light -S 100 -s sysfs/leds/spi::kbd_backlight"
+bindsym XF86KbdBrightnessDown exec "light -S 0   -s sysfs/leds/spi::kbd_backlight"
+
 # Volume control
 # from: https://reddit.com/r/swaywm/comments/qei3oh/how_can_i_set_up_keybindgs_with_sway_for_volume/hhtvsen/
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
