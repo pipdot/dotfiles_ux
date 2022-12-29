@@ -1,0 +1,3 @@
+
+#" uses variable defined in equivalent i3-common file.
+exec setxkbmap -layout "$kb_layout"
