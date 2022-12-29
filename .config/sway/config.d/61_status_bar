@@ -4,18 +4,15 @@
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
+    id 1
     position top
-
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    # status_command while date +'%Y-%m-%d %H:%M:%S %p'; do sleep 1; done
-    # swaybar_command waybar
-    # status_command python "$POWERLINE_ROOT/bindings/lemonbar/powerline-lemonbar.py --i3"
+    # Powerline
     status_command python "$POWERLINE_ROOT/bindings/i3/powerline-i3.py"
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
+    # do not show native workspace buttons
+    # they will be handled by powerline
+    workspace_buttons no
 }
+# exec python "$POWERLINE_ROOT/bindings/lemonbar/powerline-lemonbar.py"
+# exec "powerline-lemonbar --height 16 -- -b -f 'DejaVu Sans Mono-11' -f 'PowerlineSymbols-12' -f 'FontAwesome-11'"

@@ -1,5 +1,11 @@
 # requirements.in
 # see: https://stackoverflow.com/a/65666949
-powerline-status
-i3ipc
+# fixme: as of now, the powerline-status Pypi.org package is still at 2.7
+# see: https://github.com/powerline/powerline/issues/2116#issue-679048896
+# powerline-status
+# git+https://github.com/ph111p/powerline.git@develop
 
+# install from void packages:
+# python3-i3ipc
+# python3-tkinter
+# etc...
