@@ -6,6 +6,7 @@
 # git+https://github.com/ph111p/powerline.git@develop
 
 # install from void packages:
+# ? xsettingsd (runit)
 # python3-i3ipc
 # python3-tkinter
 # python3-iwlib
