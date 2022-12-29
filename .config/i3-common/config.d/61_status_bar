@@ -15,4 +15,4 @@ bar {
     workspace_buttons no
 }
 # exec python "$POWERLINE_ROOT/bindings/lemonbar/powerline-lemonbar.py"
-# exec "powerline-lemonbar --height 16 -- -b -f 'DejaVu Sans Mono-11' -f 'PowerlineSymbols-12' -f 'FontAwesome-11'"
+# exec "powerline-lemonbar"

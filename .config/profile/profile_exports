@@ -45,7 +45,7 @@ fi
 # Activate virtual env for stuff
 # export DOTPYENV_ROOT="$HOME/.local/venv/dot"
 # if [ -f "$DOTPYENV_ROOT/bin/activate" ]; then
-  # . "$DOTPYENV_ROOT/bin/activate"
+# . "$DOTPYENV_ROOT/bin/activate"
 # fi
 # --------------------------------------------------------------------
 # get powerline-status pip package install folder
@@ -56,10 +56,8 @@ get_pip_package_location() {
 # Prefer using powerline-status fork
 # from: https://github.com/PH111P/powerline
 # NOPE
-# pip_root=$(get_pip_package_location "powerline-status-i3")
-# if [ -z $pip_root ]; then
-pip_root=$(get_pip_package_location "powerline-status")
-# fi
+powerline_package="powerline-status"
+pip_root=$(get_pip_package_location $powerline_package)
 if ! [ -z $pip_root ]; then
   export POWERLINE_ROOT="$pip_root/powerline"
 fi

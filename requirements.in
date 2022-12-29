@@ -8,4 +8,6 @@
 # install from void packages:
 # python3-i3ipc
 # python3-tkinter
+# python3-iwlib
+# font-awesome
 # etc...
