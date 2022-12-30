@@ -7,5 +7,5 @@ set $term alacritty | foot
 # on the original workspace that the command was run on.
 set $menu rofi -show drun | dmenu_path | dmenu | xargs swaymsg exec --
 set $filer thunar | nautilus
-set $brower firefox
+set $browser firefox
 set $imgviewer swayimg

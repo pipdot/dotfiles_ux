@@ -3,3 +3,6 @@
 input "type:keyboard" {
   xkb_layout "$kb_layout"
 }
+input "type:touchpad" {
+  natural_scroll enabled
+}
