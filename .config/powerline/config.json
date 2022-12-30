@@ -1,7 +1,7 @@
 {
 	"common": {
 		"term_truecolor": false,
-		"log_file": "~/.var/log/powerline",
+		"log_file": "~/.var/log/powerline.log",
 		"log_level": "DEBUG"
 	},
 	"ext": {
