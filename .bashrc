@@ -2,21 +2,12 @@
 # if the shell is non-interactive.
 [ -f "$HOME/.profile" ] && . "$HOME/.profile"
 # Also load bash-specific exports
-source_profile_module "bash_exports"
+source_profile_module "bash/bash_exports"
 [ -z "$PS1" ] && return
 
-shopt -s histappend                            # Add history from all the terminal opened
-shopt -s checkwinsize                          # Keep checking terminal size
-if [ $BASH_VERSINFO -ge 4 ]; then
-  shopt -s globstar                            # ** enabled
-  shopt -s autocd                              # Type the directory name and cd it
-fi
-set -o vi                                      # VI mode readline
-stty -ixon                                     # Set forward searching
-
 # module loading (Order matters) :ARCANE:
-source_profile_module "bash_aliases" "bash_functions" "bash_prompt"
-source_profile_file "bash_completion"
+source_profile_module "bash/bash_aliases" "bash/bash_functions" "bash/bash_keys" "bash/bash_browsing" "bash/bash_prompt"
+source_profile_file "bash/bash_completion"
 
 # FIXME: RUN TMUX AT ALACRITTY STARTUP INSTEAD
 # Run tmux if found
@@ -27,4 +18,5 @@ source_profile_file "bash_completion"
 # if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   # exec tmux new -As0
 # fi
+
 
