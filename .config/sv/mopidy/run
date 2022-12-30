@@ -5,7 +5,6 @@
 [ -r ./conf ] && . ./conf
 
 # TODO logging
-# exec "mopidy ${OPTS:-} local scan" 2>&1
+mopidy ${OPTS:-} local scan 2>&1
 exec mopidy ${OPTS:-} 2>&1
-
 
