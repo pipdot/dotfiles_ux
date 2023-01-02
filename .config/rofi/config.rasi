@@ -1,0 +1,7 @@
+configuration {
+  modi: "window,drun,ssh,combi";
+  kb-cancel: "Escape,Alt+F1";
+  // font: "hack 10";
+  combi-modi: "window,drun,ssh";
+}
+@theme "Arc-Dark"
