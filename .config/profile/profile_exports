@@ -1,6 +1,14 @@
 #!/bin/sh
 
 # Environment variables -----------------------------------------------
+# set XDG
+# see specification
+# at: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.var/cache
+export XDG_STATE_HOME=$HOME/.var/state
+export XDG_RUNTIME_HOME=$HOME/.var/run
+
 # tmux overwrites this value and won't work otherwise.
 # So we instead use a non-standard TERMINAL value
 # just so that we can know we are running tmux inside alacritty.
@@ -77,7 +85,7 @@ if [ -z $fzf_root ]; then
  # look for it in user's home, manually installed
   fzf_root=$(find_fzf_root ~/.fzf/bin/fzf)
   export FZF_SHELL_ROOT="$(dirname $fzf_root)/shell"
-  export PATH="$fzf_root/bin:$PATH"
+  export PATH="$fzf_root:$PATH"
 else
   # handled by distribution, probably?
   fzf_root="/usr/share/fzf"
@@ -94,6 +102,10 @@ FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border --inline-info'
 # FZF_ALT_C_COMMAND=
 # FZF_ALT_C_OPTS=
 FZF_TMUX_OPTS='-d 40%'
+
+# --------------------------------------------------------------------
+# Qt & Gnome
+export QT_QPA_PLATFORMTHEME='gnome'
 
 # --------------------------------------------------------------------
 # vim: ft=sh :

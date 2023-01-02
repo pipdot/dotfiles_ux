@@ -6,5 +6,9 @@ set $term alacritty | foot
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu rofi -show drun | dmenu_path | dmenu | xargs swaymsg exec --
-set $filer thunar | nautilus
-set $browser firefox
+set $filer thunar | nautilus set $browser firefox
+#
+# set $uifont "pango:Fira Code"
+set $uifont "pango:Inconsolata"
+set $uifontsize 11
+
