@@ -161,3 +161,11 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
+# Opacity (if applicable)
+# TODO: use something other than a mode for this.
+mode $opaquemode {
+    bindsym $mod+o mode "default"
+}
+bindsym $mod+o mode $opaquemode
+

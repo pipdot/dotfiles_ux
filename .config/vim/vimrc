@@ -299,6 +299,10 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 " Unmanaged plugin (manually installed and updated)
 " Plug '~/my-prototype-plugin'
+"
+" wl-clipboard integration
+Plug 'jasonccox/vim-wayland-clipboard'
+" Vim stuff
 Plug 'tpope/vim-surround'
 Plug 'preservim/vimux'
 " Key-binding
