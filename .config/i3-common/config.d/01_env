@@ -8,7 +8,12 @@ set $term alacritty | foot
 set $menu rofi -show drun | dmenu_path | dmenu | xargs swaymsg exec --
 set $filer thunar | nautilus set $browser firefox
 #
+# Font
 # set $uifont "pango:Fira Code"
 set $uifont "pango:Inconsolata"
 set $uifontsize 11
+
+# Colours
+set $highlightcolour "#3daee9"
+set $promptcolour "#18b218"
 

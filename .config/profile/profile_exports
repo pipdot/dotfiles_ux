@@ -4,6 +4,7 @@
 # set XDG
 # see specification
 # at: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
+#
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.var/cache
 export XDG_STATE_HOME=$HOME/.var/state
@@ -42,6 +43,11 @@ export VIMINIT="set nocp | source ${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc"
 export PATH="$HOME/.local/bin:$PATH"
 # runit user services
 export SVDIR="$HOME/.var/service"
+
+# --------------------------------------------------------------------
+# Font
+export FONT_UI="Fira Code"
+
 # -------------------------------------------------------------------
 # Pyenv
 # setup path if pyenv executable is found in expected location.
@@ -107,5 +113,6 @@ FZF_TMUX_OPTS='-d 40%'
 # Qt & Gnome
 export QT_QPA_PLATFORMTHEME='gnome'
 
+source_profile_file "gtk_settings"
 # --------------------------------------------------------------------
 # vim: ft=sh :
