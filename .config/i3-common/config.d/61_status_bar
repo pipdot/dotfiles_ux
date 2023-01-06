@@ -14,7 +14,7 @@ bar {
     # they will be handled by powerline
     workspace_buttons no
 }
-# exec python "$POWERLINE_ROOT/bindings/lemonbar/powerline-lemonbar.py"
+# exec "python $POWERLINE_ROOT/bindings/lemonbar/powerline-lemonbar.py --i3 -- -d"
 # exec "powerline-lemonbar"
 #
 ## Titlebars

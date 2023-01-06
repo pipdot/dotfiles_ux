@@ -9,9 +9,16 @@ export BASH_COMPLETION_USER_FILE="$PROFILE_CONFIG_DIR/bash/bash_completion_ext"
 
 source_profile_module "bash/bash_completion_ext"
 
+# ---------------
 # Enable fzf completion
 # Auto-completion
-# ---------------
 if ! [ -z $FZF_SHELL_ROOT ]; then
   [[ $- == *i* ]] && source "$FZF_SHELL_ROOT/completion.bash" 2> /dev/null
 fi
+
+# ---------------
+# Enable NVM completion
+if ! [ -z $NVM_DIR ]; then
+  . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+fi
+

@@ -75,6 +75,25 @@ pip_root=$(get_pip_package_location $powerline_package)
 if ! [ -z $pip_root ]; then
   export POWERLINE_ROOT="$pip_root/powerline"
 fi
+
+# --------------------------------------------------------------------
+# NVM
+
+# TODO: find it as we do with FZF.
+nvm_dir="$HOME/.nvm"
+if [ -s "$nvm_dir/nvm.sh" ]; then
+  export NVM_DIR=$nvm_dir
+  . "$NVM_DIR/nvm.sh"  # This loads nvm
+fi
+
+# --------------------------------------------------------------------
+# rbenv
+
+# TODO: find it
+if command -v rbenv &> /dev/null; then
+  eval "$(rbenv init - bash)"
+fi
+
 # --------------------------------------------------------------------
 # FZF
 # Setup fzf
@@ -82,8 +101,8 @@ find_fzf_root() {
   if command -v $1 &> /dev/null; then
     fzf_path=$(command -v $1)
     fzf_root=$(dirname "$fzf_path")
+    echo $fzf_root
   fi
-  echo $fzf_root
 }
 # look for fzf in different locations
 fzf_root=$(find_fzf_root "fzf") # already in PATH, installed through distro
@@ -109,9 +128,11 @@ FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border --inline-info'
 # FZF_ALT_C_OPTS=
 FZF_TMUX_OPTS='-d 40%'
 
+
 # --------------------------------------------------------------------
 # Qt & Gnome
-export QT_QPA_PLATFORMTHEME='gnome'
+# export QT_QPA_PLATFORMTHEME='gnome'
+export QT_STYLE_OVERRIDE='kvantum'
 
 source_profile_file "gtk_settings"
 # --------------------------------------------------------------------

@@ -5,6 +5,8 @@
 [ -r ./conf ] && . ./conf
 
 # TODO logging
-mopidy ${OPTS:-} local scan 2>&1
+# TODO don't wait for local scan to launch mopidy (async?), right now restart waits for 7 seconds before giving up.
+# TODO create a ./check to report that mopidy is running.
+# mopidy ${OPTS:-} local scan 2>&1
 exec mopidy ${OPTS:-} 2>&1
 

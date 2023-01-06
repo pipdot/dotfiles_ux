@@ -1,3 +1,4 @@
+#!/bin/sh
 
 gnome_schema="org.gnome.desktop.interface"
 
@@ -14,7 +15,7 @@ if [ -f "$config" ]; then
   font_name="$(grep 'gtk-font-name' "$config" | sed 's/.*\s*=\s*//')"
 fi
 
-if command -v gsettings 2&> /dev/null; then
+if command -v gsettings &> /dev/null; then
   gsettings set "$gnome_schema" color-scheme "$colour_scheme"
   gsettings set "$gnome_schema" gtk-theme "$gtk_theme"
   gsettings set "$gnome_schema" icon-theme "$icon_theme"

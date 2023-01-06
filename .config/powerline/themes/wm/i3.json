@@ -5,7 +5,12 @@
 						"function": "powerline.segments.i3wm.workspaces"
 					},
 					{
-						"function": "powerline.segments.i3wm.mode"
+						"function": "powerline.segments.i3wm.mode",
+						"args": {
+							"names": {
+								"default": "default"
+							}
+						}
 					}
 		],
 		"right": [
@@ -44,7 +49,7 @@
         "function": "powerline.segments.common.bat.battery",
         "args": {
           "gamify": true,
-          "steps": 6
+          "teps": 6
         }
       }
 		]
