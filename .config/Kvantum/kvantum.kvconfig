@@ -1,2 +1,5 @@
+[General]
+theme=WhiteSurDark
 
-theme=KvLibadwaita
+[Applications]
+Default=kdeconnect
