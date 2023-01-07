@@ -28,13 +28,13 @@ set $wright o
     # Despite the name, also works for non-floating windows.
     # Change normal to inverse to use left mouse button for resizing and right
     # mouse button for dragging.
-    floating_modifier $mod normal
+    # floating_modifier $mod normal
+    floating_modifier $mod
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-
+    bindsym $mod+Shift+e exec $exitmenu
 #
 # Moving around:
 #
@@ -161,3 +161,11 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
+# Opacity (if applicable)
+# TODO: use something other than a mode for this.
+mode $opaquemode {
+    bindsym $mod+o mode "default"
+}
+bindsym $mod+o mode $opaquemode
+

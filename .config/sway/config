@@ -1,7 +1,9 @@
-# Default config for sway
+# config for sway
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
-# include local and user config
-include ./config.d/*
+# include local and user config common with i3
+include ~/.config/i3-common/config.d/*
+# include local and user config exclusive to sway
+include ~/.config/sway/config.d/*

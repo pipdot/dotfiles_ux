@@ -1,0 +1,24 @@
+#!/bin/bash
+
+export BASH_COMPLETION_USER_FILE="$PROFILE_CONFIG_DIR/bash/bash_completion_ext"
+
+# Use bash-completion, if available
+# see: https://github.com/scop/bash-completion
+# bash_completion_file="/usr/share/bash-completion/bash_completion"
+# [[ -f "$bash_completion_file" ]] && . "$bash_completion_file"
+
+source_profile_module "bash/bash_completion_ext"
+
+# ---------------
+# Enable fzf completion
+# Auto-completion
+if ! [ -z $FZF_SHELL_ROOT ]; then
+  [[ $- == *i* ]] && source "$FZF_SHELL_ROOT/completion.bash" 2> /dev/null
+fi
+
+# ---------------
+# Enable NVM completion
+if ! [ -z $NVM_DIR ]; then
+  . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+fi
+

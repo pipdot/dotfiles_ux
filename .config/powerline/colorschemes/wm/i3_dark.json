@@ -22,6 +22,11 @@
 		"battery_full":               { "fg": "red", "bg": "gray0", "attrs": [] },
 		"battery_empty":              { "fg": "white", "bg": "gray0", "attrs": [] },
 		"mem_usage":                 { "fg": "gray8", "bg": "gray0", "attrs": [] },
-		"mem_usage_gradient":        { "fg": "green_yellow_orange_red", "bg": "gray0", "attrs": [] }
+		"mem_usage_gradient":        { "fg": "green_yellow_orange_red", "bg": "gray0", "attrs": [] },
+		"mode": { "fg": "white", "bg": "gray0", "attrs": [] },
+		"scratchpad": { "fg": "white", "bg": "gray0", "attrs": [] },
+		"workspace": { "fg": "darkblue", "bg": "gray0", "attrs": [] },
+		"w_focused": { "fg": "white", "bg": "gray0", "attrs": [] },
+		"w_urgent": { "fg": "white_red", "bg": "gray0", "attrs": [] }
 	}
 }

@@ -1,0 +1,23 @@
+### Variables
+#
+# Your preferred terminal emulator
+set $term alacritty | foot
+# Your preferred application launcher
+# Note: pass the final command to swaymsg so that the resulting window can be opened
+# on the original workspace that the command was run on.
+set $menu rofi -show drun | dmenu_path | dmenu | xargs swaymsg exec --
+set $filer thunar | nautilus set $browser firefox
+#
+set $screenshotdir ~/screenshots
+# Font
+# set $uifont "pango:Fira Code"
+set $uifont "pango:Inconsolata"
+set $uifontsize 11
+# Colours
+set $highlightcolour "#3daee9"
+set $promptcolour "#18b218"
+#
+# Opacity of active / inactive windows
+set $opaquemode "opaque"
+set $opacityactive 0.98
+set $opacityinactive 0.85

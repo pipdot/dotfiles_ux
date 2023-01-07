@@ -1,0 +1,9 @@
+# -*- mode: sh; -*-
+
+# Additional command line arguments for mopidy(1).
+OPTS='--config /etc/mopidy/mopidy.conf:~/.config/mopidy/mopidy.conf:~/.config/mopidy/mopidy.local.conf'
+
+# Setting this to 1 enables logging, any other value - disables.
+LOGGING_ENABLE=0
+# The directory will be created for you, if logging is enabled.
+LOG_DIR="$HOME/.var/log/mopidy"
