@@ -1,0 +1,8 @@
+
+set $imgviewer $imgviewer | swayimg
+set $menu $menu | xargs swaymsg exec --
+set $exitmenu wlogout
+
+# IMPORTANT: reminder NOT to put quotes in path vars of sway config.
+set $scriptdir ~/.config/sway/scripts
+

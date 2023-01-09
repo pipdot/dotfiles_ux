@@ -1,0 +1,10 @@
+
+font $uifont $uifontsize
+# see: https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland
+exec_always ". ~/.config/profile/gtk_settings"
+
+# Opacity
+# opacity set $opacityactive
+# see: reddit.com/r/swaywm/comments/qtlfry/comment/hkkdpvr/?utm_source=share&utm_medium=web2x&context=3
+exec_always "python $scriptdir/inactive-windows-transparency.py --focused $opacityactive --unfocused $opacityinactive --opaque_mode opaque"
+
