@@ -15,7 +15,8 @@
 	  // "sway/window",
 		// "custom/arrow8",
 		"tray",
-    "mpd"
+    "mpd",
+    "custom/playerctl",
 	],
 
 	"modules-right": [
@@ -150,9 +151,12 @@
 		"on-click": "pavucontrol"
 	},
   "mpd": {
-      "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
-      "format-disconnected": "",
-      "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+      //"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
+      //"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
+      "format": "",
+      "format-disconnected": "()",
+      // "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+      "format-stopped": "",
       "interval": 10,
       "consume-icons": {
           "on": " " // Icon shows only when "consume" is on
@@ -173,11 +177,25 @@
       },
       "tooltip-format": "MPD (connected)",
       "tooltip-format-disconnected": "MPD (disconnected)",
-      "max-length": "15",
+      "min-length": "5",
+      "max-length": "20",
       "title-len": "10",
       "artist-len": "10",
       "album-len": "10"
   },
+	"custom/playerctl": {
+			"format": "{icon}  <span>{}</span>",
+			"return-type": "json",
+			"max-length": 50,
+			"exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} ~ {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+			"on-click-middle": "playerctl play-pause",
+			"on-click": "playerctl previous",
+			"on-click-right": "playerctl next",
+			"format-icons": {
+				"Playing": "<span foreground='#94e2d5'></span>",
+				"Paused": "<span foreground='#f38ba8'></span>"
+			}
+		},
 
 
 	"temperature": {
