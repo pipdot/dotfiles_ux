@@ -1,5 +1,5 @@
-
-# First load system-wide profile
+# .profile
+# First load system-wide profile
 [ -f "/etc/profile" ] && . "/etc/profile"
 
 # note: no need to export it,

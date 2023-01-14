@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # source all user completion files
-for file in "$(find $PROFILE_CONFIG_DIR/bash/bash_completion.d -type f -print)"; do
+bash_completion_dir="$PROFILE_CONFIG_DIR/bash/bash_completion.d"
+for file in "$(find $bash_completion_dir -type f -print)"; do
   [[ -f $file ]] && . "$file" --source-only
 done

@@ -332,7 +332,12 @@ Plug 'mbbill/undotree'
 Plug 'easymotion/vim-easymotion'
 Plug 'vim-autoformat/vim-autoformat'
 " Plug  'sainnhe/edge' Initialize plugin system
+
 call plug#end()
+"}}}
+"Termdebug {{{
+" ---------------------------------------------------------------------
+let g:termdebug_wide=1
 "}}}
 "Status line (Powerline) {{{
 " ---------------------------------------------------------------------
@@ -435,7 +440,7 @@ let g:NERDTreeShowBookmarks = 1
 let g:NERDTreeDirArrows = 0
 " }}}
 
-"Edge (colourschemes) "{{{
+"colourschemes (Edge) "{{{
 " ---------------------------------------------------------------------
 " let g:edge_style = 'aura'
 " let g:edge_enable_italic = 0
