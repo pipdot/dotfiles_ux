@@ -8,6 +8,8 @@ set $term alacritty | foot
 set $menu rofi -show drun | dmenu_path | dmenu | xargs swaymsg exec --
 set $filer thunar | nautilus set $browser firefox
 #
+set $backgrounddir ~/.config/i3-common/backgrounds
+#
 set $screenshotdir ~/screenshots
 # Font
 # set $uifont "pango:Fira Code"
