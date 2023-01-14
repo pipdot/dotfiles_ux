@@ -31,7 +31,7 @@
 		"cpu",
 		"custom/arrow5",
 		"temperature",
-		//"custom/arrow6",
+		"custom/arrow6",
 		"battery",
 		//"custom/arrow7",
 		//"sway/language",
