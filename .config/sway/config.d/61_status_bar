@@ -1,0 +1,20 @@
+
+#
+# Status Bar:
+#
+# Read `man 5 sway-bar` for more information about this section.
+bar {
+    id 1
+    position top
+    # When the status_command prints a new line to stdout, swaybar updates.
+    # The default just shows the current date and time.
+    # Powerline
+    # status_command python "$POWERLINE_ROOT/bindings/i3/powerline-i3.py"
+    swaybar_command waybar
+    # do not show native workspace buttons
+    # they will be handled by powerline
+    workspace_buttons no
+}
+# exec "python $POWERLINE_ROOT/bindings/lemonbar/powerline-lemonbar.py --i3 -- -d"
+# exec "powerline-lemonbar"
+#

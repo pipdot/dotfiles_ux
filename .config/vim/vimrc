@@ -312,7 +312,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'wesQ3/vim-windowswap'
 
 
-"" Utility for multiple languages
+" Utility for multiple languages
 Plug 'liuchengxu/vista.vim'
 Plug 'tpope/vim-commentary'
 " Git
@@ -331,8 +331,7 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'mbbill/undotree'
 Plug 'easymotion/vim-easymotion'
 Plug 'vim-autoformat/vim-autoformat'
-
-" Initialize plugin system
+" Plug  'sainnhe/edge' Initialize plugin system
 call plug#end()
 "}}}
 "Status line (Powerline) {{{
@@ -352,7 +351,49 @@ if has('python3')
 endif
 
 "}}}
-"ALE {{{
+
+"YouCompleteMe {{{
+" ---------------------------------------------------------------------
+" Make Vim always render the sign column:
+" set signcolumn=yes
+" Mapping to close the completion menu (default <C-y>)
+let g:ycm_key_list_stop_completion = ['<C-x>']
+
+" Set filetypes where YCM will be turned on
+let g:ycm_filetype_whitelist = { 'cpp':1, 'h':2, 'hpp':3, 'c':4, 'cxx':5 }
+
+" Close preview window after completing the insertion
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+
+let g:ycm_confirm_extra_conf = 0
+" Don't confirm python conf
+let g:ycm_always_populate_location_list = 1
+" Always populate diagnostics list
+let g:ycm_enable_diagnostic_signs = 1
+" Enable line highligting diagnostics
+let g:ycm_open_loclist_on_ycm_diags = 1
+" Open location list to view diagnostics
+
+let g:ycm_max_num_candidates = 20
+" Max number of completion suggestions
+let g:ycm_max_num_identifier_candidates = 10
+" Max number of identifier-based suggestions
+let g:ycm_auto_trigger = 1
+" Enable completion menu
+let g:ycm_show_diagnostic_ui = 1
+" Show diagnostic display features
+let g:ycm_error_symbol = '>>'
+" The error symbol in Vim gutter
+let g:ycm_enable_diagnostic_signs = 1
+" Display icons in Vim's gutter, error, warnings
+let g:ycm_enable_diagnostic_highlighting = 1
+" Highlight regions of diagnostic text
+let g:ycm_echo_current_diagnostic = 1
+" Echo line's diagnostic that cursor is on
+"}}}
+
+"ALE / YCM {{{
 "
 let g:ale_linters = {'python': 'all'}
 let g:ale_fixers = {'python': ['isort', 'yapf', 'remove_trailing_lines', 'trim_whitespace']}
@@ -393,6 +434,19 @@ let g:NERDTreeHighlightCursorline = 1
 let g:NERDTreeShowBookmarks = 1
 let g:NERDTreeDirArrows = 0
 " }}}
+
+"Edge (colourschemes) "{{{
+" ---------------------------------------------------------------------
+" let g:edge_style = 'aura'
+" let g:edge_enable_italic = 0
+" let g:edge_disable_italic_comment = 1
+" if has('termguicolors')
+    " set termguicolors
+" endif
+" set guifont=Hack\ 11
+" set background=dark
+" colorscheme edge
+"}}}}
 "SuperTab | utisnipts {{{
 "let g:UltiSnipsExpandTrigger        = "<C-j>"
 "let g:UltiSnipsJumpForwardTrigger   = "<C-k>"

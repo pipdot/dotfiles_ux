@@ -1,1 +1,1 @@
-output "*" bg $backgroundimg
+output "*" bg $backgroundimg stretch
