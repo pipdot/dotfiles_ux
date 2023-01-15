@@ -1,0 +1,5 @@
+
+# use dex for autostarting using the XDG autostart specification.
+# see:
+# https://specifications.freedesktop.org/autostart-spec/autostart-spec-latest.html
+exec dex --autostart
