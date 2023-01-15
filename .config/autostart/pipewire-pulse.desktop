@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=pipewire-pulse
+Comment=Pipewire-pulse bridge
+Exec=pipewire-pulse
+Type=Application
