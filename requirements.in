@@ -10,11 +10,10 @@
 # wlogout
 # wlr-randr
 # qt6-wayland (for obs)
-# font-awesome4,5,6?
-
+# dex (for autostarting)
 # ? xsettingsd (runit)
 # python3-i3ipc
 # python3-tkinter
 # python3-iwlib
-# font-awesome
+# font-awesome4,5,6?
 # etc...

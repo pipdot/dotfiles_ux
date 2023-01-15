@@ -39,10 +39,10 @@
 @define-color sound	@brpurple;
 @define-color network	@purple;
 @define-color memory	@braqua;
-@define-color cpu	@green;
+@define-color cpu	@aqua;
 @define-color temp	@brgreen;
+@define-color battery	@green;
 @define-color layout	@bryellow;
-@define-color battery	@aqua;
 @define-color date	@black;
 @define-color time	@white;
 
