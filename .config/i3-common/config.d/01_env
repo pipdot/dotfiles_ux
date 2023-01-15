@@ -13,8 +13,8 @@ set $backgrounddir ~/.config/i3-common/backgrounds
 set $screenshotdir ~/screenshots
 
 # Idle
-set $timeoutlock=1800
-set $timeoutdisplayoff=3600
+set $timeoutlock 1800
+set $timeoutdisplayoff 3600
 
 # Font
 # set $uifont "pango:Fira Code"
