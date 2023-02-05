@@ -1,11 +1,11 @@
 #!/bin/bash
 
+# use forward-search-history
+stty -ixon
+
 shopt -s histappend                            # Add history from all the terminal opened
 shopt -s checkwinsize                          # Keep checking terminal size
 if [ $BASH_VERSINFO -ge 4 ]; then
   shopt -s globstar                            # ** enabled
   shopt -s autocd                              # Type the directory name and cd it
 fi
-set -o vi                                      # VI mode readline
-stty -ixon                                     # Set forward searching
-
