@@ -11,7 +11,8 @@
 # wlr-randr
 # qt6-wayland (for obs)
 # dex (for autostarting)
-# gvfs (for automounting external drives)
+# ldm (for automounting external drives)
+# gvfs && polikit-gnome (for mounting / seeing drives in Thunar?)
 # ? xsettingsd (runit)
 # python3-i3ipc
 # python3-tkinter
