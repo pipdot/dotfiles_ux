@@ -1,3 +1,4 @@
+#!/usr/bin/env xdg-open
 [Desktop Entry]
 # TODO: currently no portable way to determine default terminal emulator
 # see: https://github.com/FreeSlave/desktopfile
