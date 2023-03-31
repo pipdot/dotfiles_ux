@@ -18,6 +18,4 @@ modules:
       - match: '\/plug\.vim$'
         target_dir: ~/.config/vim/autoload/
       # skip everything else
-      - match: '.*'
-        skip: true
     name: vim-plug
