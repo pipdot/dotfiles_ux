@@ -37,7 +37,6 @@ set runtimepath+=$XDG_DATA_HOME/vim
 set runtimepath+=$XDG_CONFIG_HOME/after
 
 " Vim8 built-in packages, apparently
-set packpath^=$XDG_DATA_HOME/vim
 set packpath+=$XDG_DATA_HOME/vim/after
 
 let g:netrw_home = $XDG_DATA_HOME.'/vim'
