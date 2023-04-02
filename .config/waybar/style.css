@@ -40,6 +40,7 @@
 @define-color inactive	@purple;
 @define-color sound	@brpurple;
 @define-color network	@purple;
+@define-color bluetooth @brblue;
 @define-color memory	@braqua;
 @define-color cpu	@aqua;
 @define-color temp	@brgreen;
@@ -78,6 +79,7 @@
 #memory,
 #mode,
 #network,
+#bluetooth,
 #pulseaudio,
 #temperature,
 #custom-alsa,
@@ -167,6 +169,11 @@
 	color: @white;
 }
 
+#bluetooth {
+	background: @bluetooth;
+	color: @black;
+}
+
 #memory {
 	background: @memory;
 	color: @black;
@@ -226,7 +233,7 @@
 #custom-arrow-left3 {
 	font-size: 11pt;
 	color: @memory;
-	background: @network;
+	background: @bluetooth;
 }
 
 #custom-arrow-left4 {
@@ -269,6 +276,12 @@
 	font-size: 11pt;
 	color: @date;
 	background: @battery;
+}
+
+#custom-arrow-left11 {
+	font-size: 11pt;
+	color: @bluetooth;
+	background: @network;
 }
 
 #custom-arrow-right1 {
