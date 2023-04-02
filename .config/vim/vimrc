@@ -147,6 +147,12 @@ autocmd BufRead,BufNewFile * match BadWhitespace /\s\+$/
 " ---------------------------------------------------------------------
 let mapleader = " "
 
+"use Bépo keys for navigation.
+"see: https://stackoverflow.com/a/26397302
+"see: https://vi.stackexchange.com/a/232
+" set langnoremap
+" set langmap=ch,tj,sk,rl
+
 " This is VIM we don't need arrow keys
 noremap  <Up>     <NOP>
 noremap  <Down>   <NOP>

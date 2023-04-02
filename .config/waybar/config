@@ -93,7 +93,7 @@
 	},
 
 	"sway/language": {
-		"format": " {}",
+		"format": " {short}({variant})",
 		"min-length": 5,
 		"on-click": "swaymsg 'input * xkb_switch_layout next'",
 		"tooltip": false

@@ -1,7 +1,8 @@
 
 # uses variable defined in equivalent i3-common file.
 input "type:keyboard" {
-  xkb_layout "$kb_layout"
+  xkb_layout "$kb_layouts",
+  xkb_variant "$kb_variants"
 }
 input "type:touchpad" {
   natural_scroll enabled
