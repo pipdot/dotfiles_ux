@@ -13,20 +13,23 @@
 		"sway/mode",
 		"sway/workspaces",
 		"custom/arrow-right1",
+		"tray",
+		"custom/arrow-right5",
 	],
 
 	"modules-center": [
 	  // "sway/window",
 		// "custom/arrow-left8",
-		"tray",
+		"custom/arrow-left12",
     "mpd",
-    "custom/playerctl",
+    // "custom/playerctl",
+		"mpris",
+		"custom/arrow-right4",
 	],
 
 	"modules-right": [
 		"custom/arrow-left1",
 		"pulseaudio",
-		// "custom/alsa",
 		//"sndio",
 		"custom/arrow-left2",
 		"network",
@@ -182,8 +185,8 @@
   "mpd": {
       //"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
       //"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
-      "format": "",
-      "format-disconnected": "()",
+      "format": "🨅",
+      "format-disconnected": "🨯",
       // "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
       "format-stopped": "",
       "interval": 10,
@@ -202,7 +205,8 @@
       },
       "state-icons": {
           "paused": "",
-          "playing": ""
+          "playing": "",
+					"stopped": "■"
       },
       "tooltip-format": "MPD (connected)",
       "tooltip-format-disconnected": "MPD (disconnected)",
@@ -212,6 +216,27 @@
       "artist-len": "10",
       "album-len": "10"
   },
+
+	"mpris": {
+			"format": "{icon}  <span>{}</span>",
+			"return-type": "json",
+			"max-length": 50,
+			"on-click-middle": "playerctl play-pause",
+			"on-click": "playerctl previous",
+			"on-click-right": "playerctl next",
+			"format": "DEFAULT: {player_icon} {dynamic}",
+				"format-paused": "DEFAULT: {status_icon} <i>{dynamic}</i>",
+				"player-icons": {
+					"default": "▶",
+					"mpv": "🎵"
+				},
+				"status-icons": {
+					"paused": "⏸",
+					"stopped": "■",
+				},
+				// "ignored-players": ["firefox"]
+		},
+
 	"custom/playerctl": {
 			"format": "{icon}  <span>{}</span>",
 			"return-type": "json",
@@ -238,16 +263,6 @@
 			"",
 			""
 		],
-		"tooltip": false
-	},
-
-	"custom/alsa": {
-		"exec": "amixer get Master | sed -nre 's/.*\\[off\\].*/ muted/p; s/.*\\[(.*%)\\].*/ \\1/p'",
-		"on-click": "amixer set Master toggle",
-		"on-scroll-up": "amixer set Master 1+",
-		"on-scroll-down": "amixer set Master 1-",
-		"signal": 11,
-		"interval": 10,
 		"tooltip": false
 	},
 
@@ -312,6 +327,11 @@
 		"format": "",
 		"tooltip": false
 	},
+	"custom/arrow-left12": {
+		"format": "",
+		"tooltip": false
+	},
+
 	"custom/arrow-right1": {
 		"format": "",
 		"tooltip": false
@@ -321,6 +341,14 @@
 		"tooltip": false
 	},
 	"custom/arrow-right3": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/arrow-right4": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/arrow-right5": {
 		"format": "",
 		"tooltip": false
 	},

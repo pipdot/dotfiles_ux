@@ -15,7 +15,7 @@
 @define-color red	#cc241d;
 @define-color green	#98971a;
 @define-color yellow	#d79921;
-@define-color organge #d65d0e;
+@define-color orange #d65d0e;
 @define-color blue	#458588;
 @define-color purple	#b16286;
 @define-color aqua	#689d6a;
@@ -29,8 +29,10 @@
 @define-color brpurple	#d3869b;
 @define-color braqua	#8ec07c;
 @define-color white	#ebdbb2;
-@define-color bg2	#504945;
 
+@define-color bg #282828;
+@define-color bg2	#504945;
+@define-color bgm1 #1d2021;
 
 @define-color warning 	@bryellow;
 @define-color critical	@red;
@@ -49,6 +51,9 @@
 @define-color keyboard-status	@brorange;
 @define-color date	@black;
 @define-color time	@white;
+@define-color player @gray;
+@define-color tray @bgm1;
+
 
 /* Reset all styles */
 * {
@@ -81,8 +86,8 @@
 #network,
 #bluetooth,
 #pulseaudio,
+#mpris,
 #temperature,
-#custom-alsa,
 #sndio,
 #tray {
 	padding-left: 8pt;
@@ -157,10 +162,15 @@
 	margin-left: 35pt;
 }
 
-#custom-alsa,
 #pulseaudio,
 #sndio {
 	background: @sound;
+	color: @black;
+}
+
+#mpris,
+#mpd {
+	background: @player;
 	color: @black;
 }
 
@@ -205,7 +215,7 @@
 }
 
 #tray {
-	background: @date;
+	background: @tray;
 }
 
 #clock.date {
@@ -284,10 +294,16 @@
 	background: @network;
 }
 
+#custom-arrow-left12 {
+	font-size: 11pt;
+	color: @player;
+	background: transparent;
+}
+
 #custom-arrow-right1 {
 	font-size: 11pt;
 	color: @unfocused;
-	background: transparent;
+	background: @tray;
 }
 
 #custom-arrow-right2 {
@@ -300,5 +316,17 @@
 	font-size: 11pt;
 	color: @keyboard-status;
 	background: @unfocused;
+}
+
+#custom-arrow-right4 {
+	font-size: 11pt;
+	color: @player;
+	background: transparent;
+}
+
+#custom-arrow-right5 {
+	font-size: 11pt;
+	color: @tray;
+	background: transparent;
 }
 
