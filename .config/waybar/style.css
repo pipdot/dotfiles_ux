@@ -15,6 +15,7 @@
 @define-color red	#cc241d;
 @define-color green	#98971a;
 @define-color yellow	#d79921;
+@define-color organge #d65d0e;
 @define-color blue	#458588;
 @define-color purple	#b16286;
 @define-color aqua	#689d6a;
@@ -23,6 +24,7 @@
 @define-color brred	#fb4934;
 @define-color brgreen	#b8bb26;
 @define-color bryellow	#fabd2f;
+@define-color brorange  #fe8019;
 @define-color brblue	#83a598;
 @define-color brpurple	#d3869b;
 @define-color braqua	#8ec07c;
@@ -43,6 +45,7 @@
 @define-color temp	@brgreen;
 @define-color battery	@green;
 @define-color layout	@bryellow;
+@define-color keyboard-status	@brorange;
 @define-color date	@black;
 @define-color time	@white;
 
@@ -71,6 +74,7 @@
 #clock,
 #cpu,
 #language,
+#keyboard-status,
 #memory,
 #mode,
 #network,
@@ -183,6 +187,11 @@
 	color: @black;
 }
 
+#keyboard-status {
+	background: @keyboard-status;
+	color: @white;
+}
+
 #battery {
 	background: @battery;
 	color: @white;
@@ -202,68 +211,81 @@
 	color: @black;
 }
 
-#custom-arrow1 {
+#custom-arrow-left1 {
 	font-size: 11pt;
 	color: @sound;
 	background: transparent;
 }
 
-#custom-arrow2 {
+#custom-arrow-left2 {
 	font-size: 11pt;
 	color: @network;
 	background: @sound;
 }
 
-#custom-arrow3 {
+#custom-arrow-left3 {
 	font-size: 11pt;
 	color: @memory;
 	background: @network;
 }
 
-#custom-arrow4 {
+#custom-arrow-left4 {
 	font-size: 11pt;
 	color: @cpu;
 	background: @memory;
 }
 
-#custom-arrow5 {
+#custom-arrow-left5 {
 	font-size: 11pt;
 	color: @temp;
 	background: @cpu;
 }
 
-#custom-arrow6 {
+#custom-arrow-left6 {
 	font-size: 11pt;
 	color: @battery;
 	background: @temp;
 }
 
-#custom-arrow7 {
+#custom-arrow-left7 {
 	font-size: 11pt;
 	color: @layout;
 	background: @battery;
 }
 
-#custom-arrow8 {
+#custom-arrow-left8 {
 	font-size: 11pt;
 	color: @date;
 	background: @layout;
 }
 
-#custom-arrow9 {
+#custom-arrow-left9 {
 	font-size: 11pt;
 	color: @time;
 	background: @date;
 }
 
-#custom-arrow10 {
+#custom-arrow-left10 {
+	font-size: 11pt;
+	color: @date;
+	background: @battery;
+}
+
+#custom-arrow-right1 {
 	font-size: 11pt;
 	color: @unfocused;
 	background: transparent;
 }
 
-#custom-arrow11 {
+#custom-arrow-right2 {
 	font-size: 11pt;
-	color: @date;
-	background: @battery;
+	color: @layout;
+	background: @keyboard-status;
 }
+
+#custom-arrow-right3 {
+	font-size: 11pt;
+	color: @keyboard-status;
+	background: @unfocused;
+}
+

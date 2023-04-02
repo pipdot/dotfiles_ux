@@ -6,39 +6,41 @@
 	//"height": 18,
 
 	"modules-left": [
+		"sway/language",
+		"custom/arrow-right2",
+		"keyboard-state",
+		"custom/arrow-right3",
 		"sway/mode",
 		"sway/workspaces",
-		"custom/arrow10",
+		"custom/arrow-right1",
 	],
 
 	"modules-center": [
 	  // "sway/window",
-		// "custom/arrow8",
+		// "custom/arrow-left8",
 		"tray",
     "mpd",
     "custom/playerctl",
 	],
 
 	"modules-right": [
-		"custom/arrow1",
+		"custom/arrow-left1",
 		"custom/alsa",
 		"pulseaudio",
 		//"sndio",
-		"custom/arrow2",
+		"custom/arrow-left2",
 		"network",
-		"custom/arrow3",
+		"custom/arrow-left3",
 		"memory",
-		"custom/arrow4",
+		"custom/arrow-left4",
 		"cpu",
-		"custom/arrow5",
+		"custom/arrow-left5",
 		"temperature",
-		"custom/arrow6",
+		"custom/arrow-left6",
 		"battery",
-		//"custom/arrow7",
-		//"sway/language",
-		"custom/arrow11",
+		"custom/arrow-left10",
 		"clock#date",
-		"custom/arrow9",
+		"custom/arrow-left9",
 		"clock#time",
 	],
 
@@ -95,6 +97,19 @@
 		"min-length": 5,
 		"on-click": "swaymsg 'input * xkb_switch_layout next'",
 		"tooltip": false
+	},
+
+	"keyboard-state": {
+    "numlock": true,
+    "capslock": true,
+    "format": {
+        "numlock": "N {icon}",
+        "capslock": "C {icon}"
+    },
+    "format-icons": {
+        "locked": "",
+        "unlocked": ""
+    }
 	},
 
 	"memory": {
@@ -231,59 +246,66 @@
 		"spacing": 10
 	},
 
-	"custom/arrow1": {
+	"custom/arrow-left1": {
 		"format": "",
 		"tooltip": false
 	},
 
-	"custom/arrow2": {
+	"custom/arrow-left2": {
 		"format": "",
 		"tooltip": false
 	},
 
-	"custom/arrow3": {
+	"custom/arrow-left3": {
 		"format": "",
 		"tooltip": false
 	},
 
-	"custom/arrow4": {
+	"custom/arrow-left4": {
 		"format": "",
 		"tooltip": false
 	},
 
-	"custom/arrow5": {
+	"custom/arrow-left5": {
 		"format": "",
 		"tooltip": false
 	},
 
-	"custom/arrow6": {
+	"custom/arrow-left6": {
 		"format": "",
 		"tooltip": false
 	},
 
-	"custom/arrow7": {
+	"custom/arrow-left7": {
 		"format": "",
 		"tooltip": false
 	},
 
-	"custom/arrow8": {
+	"custom/arrow-left8": {
 		"format": "",
 		"tooltip": false
 	},
 
-	"custom/arrow9": {
+	"custom/arrow-left9": {
 		"format": "",
 		"tooltip": false
 	},
-
-	"custom/arrow10": {
+	"custom/arrow-left10": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/arrow-right1": {
 		"format": "",
 		"tooltip": false
 	},
-	"custom/arrow11": {
-		"format": "",
+	"custom/arrow-right2": {
+		"format": "",
 		"tooltip": false
-	}
+	},
+	"custom/arrow-right3": {
+		"format": "",
+		"tooltip": false
+	},
 }
 
 # vi:ft=jsonc
