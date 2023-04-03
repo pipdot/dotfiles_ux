@@ -1,12 +1,13 @@
 ### Variables
 #
 # Your preferred terminal emulator
-set $term alacritty | foot
+set $term alacritty | xterm
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu rofi -show drun | dmenu_path | dmenu | xargs swaymsg exec --
-set $filer thunar | nautilus set $browser firefox
+set $menu rofi -show drun | dmenu_path | dmenu
+set $filer dolphin | thunar | nautilus
+set $browser firefox
 #
 set $backgrounddir ~/.config/i3-common/backgrounds
 #

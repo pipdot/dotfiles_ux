@@ -2,7 +2,7 @@
 # These .desktop entries can also be seen and changed in ~/.local/share/applications/
 
 [Default Applications]
-inode/directory=Thunar.desktop
+inode/directory=org.kde.dolphin.desktop
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
 application/pdf=firefox.desktop
