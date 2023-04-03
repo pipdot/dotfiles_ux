@@ -1,1 +1,2 @@
-output "*" bg $backgroundimg stretch
+# set $backgroundimg $backgrounddir/...
+# output "*" bg $backgroundimg stretch
