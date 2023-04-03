@@ -1,6 +1,7 @@
 # -*- mode: sh; -*-
 
 # Additional command line arguments for mopidy(1).
+# Tip: don't use $HOME, it doesn't work. Is the $character at fault?
 OPTS='--config /etc/mopidy/mopidy.conf:~/.config/mopidy/mopidy.conf:~/.config/mopidy/mopidy.local.conf'
 
 # Setting this to 1 enables logging, any other value - disables.
