@@ -185,8 +185,8 @@
   "mpd": {
       //"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
       //"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
-      "format": "🨅",
-      "format-disconnected": "🨯",
+      "format": "❖",
+      "format-disconnected": "◇",
       // "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
       "format-stopped": "",
       "interval": 10,
