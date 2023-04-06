@@ -131,8 +131,10 @@
 		"interval": 5,
 		"format-wifi": " {essid} ({signalStrength}%)",
 		"format-ethernet": " {ifname}",
-		"format-disconnected": "No connection",
-		"format-alt": " {ipaddr}/{cidr}",
+		"format-disconnected": "",
+		"format-disabled": "",
+		"format-alt": "↑ {bandwidthUpOctets} ↓ {bandwidthDownOctets}",
+		// "format-alt": " {ipaddr}/{cidr}",
 		"tooltip": false
 	},
 
@@ -156,7 +158,8 @@
 
 	"bluetooth": {
 		"format": " {status}",
-		"format-disable": "",
+		"format-disabled": "",
+		"format-disconnected": "",
 		"format-connected": " {device_alias}",
 		"format-connected-battery": " {device_alias} {device_battery_percentage}%",
 		// "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
