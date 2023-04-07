@@ -13,6 +13,7 @@
 # dex (for autostarting)
 # ldm (for automounting external drives)
 # gvfs && polikit-gnome (for mounting / seeing drives in Thunar?)
+# gnome-keyring (because of session expired bug at restart in nextcloud-client)
 # ? xsettingsd (runit)
 # noto-fonts-ttf noto-fonts-ttf-extra noto-fonts-cjk (hanse and kanji)
 # python3-i3ipc
