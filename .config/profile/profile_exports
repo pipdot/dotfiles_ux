@@ -118,6 +118,13 @@ if ! [ -z $pip_root ]; then
   export POWERLINE_ROOT="$pip_root/powerline"
 fi
 
+# -------------------------------------------------------------------
+# rustup / cargo
+export RUSTUP_ROOT="$HOME/.cargo"
+if command -v $RUSTUP_ROOT/bin/cargo 1>/dev/null 2>&1; then
+  export PATH="$PATH:$RUSTUP_ROOT/bin"
+fi
+
 # --------------------------------------------------------------------
 # NVM
 
