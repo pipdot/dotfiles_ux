@@ -15,22 +15,26 @@ export XDG_CONFIG_DIR=$XDG_CONFIG_HOME
 export XDG_DATA_DIR=$XDG_DATA_HOME
 export XDG_CACHE_DIR=$XDG_CACHE_HOME
 
+
+# preferred terminal (non standard value)
+# used by i3-sensible-terminal
+export TERMINAL=alacritty
 # tmux overwrites this value and won't work otherwise.
 # So we instead use a non-standard TERMINAL value
 # just so that we can know we are running tmux inside alacritty.
 # This value is used in my own desktop entries .local/share/applications/*.
 # It defaults to $TERM if we're not in alacritty
 # see .config/alacritty/alacritty.yml
-export TERMINAL=${TERMINAL:-$TERM}
-terminal_name=$(echo $TERMINAL | cut -d'-' -f1)
+export SOURCE_TERMINAL=${SOURCE_TERMINAL:-$TERM}
+terminal_name=$(echo $SOURCE_TERMINAL | cut -d'-' -f1)
 # TODO
-terminal_color_mode=$(echo $TERMINAL | cut -d'-' -s -f2)
+terminal_color_mode=$(echo $SOURCE_TERMINAL | cut -d'-' -s -f2)
 # find the appropriate 'run programme in that terminal' command:
 case $terminal_name in
  alacritty)
-   terminal_run_command="$TERMINAL -e"
+   terminal_run_command="$SOURCE_TERMINAL -e"
 esac
-export TERMINAL_RUN_COMMAND=${terminal_run_command:-$TERMINAL}
+export TERMINAL_RUN_COMMAND=${terminal_run_command:-$SOURCE_TERMINAL}
 #
 export EDITOR=vim
 export HISTCONTROL=ignoreboth

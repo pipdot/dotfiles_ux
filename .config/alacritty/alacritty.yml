@@ -25,12 +25,12 @@ env:
   # maybe solution?: https://unix.stackexchange.com/a/671591
   # TERM: alacritty
   # pip: tmux overwrites this value and won't work otherwise.
-  # So we instead use a non-standard TERMINAL value
+  # So we instead use a non-standard SOURCE_TERMINAL value
   # just so that we can know we are running tmux inside alacritty.
   # This value is used in my own desktop entries .local/share/applications/*.
   # It defaults to $TERM if we're not in alacritty
   # see .profile_exports
-  TERMINAL: alacritty
+  SOURCE_TERMINAL: alacritty
 
 #window:
   # Window dimensions (changes require restart)
