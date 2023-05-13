@@ -21,7 +21,7 @@
 	  // "sway/window",
 		// "custom/arrow-left8",
 		"custom/arrow-left12",
-    "mpd",
+    // "mpd",
     // "custom/playerctl",
 		"mpris",
 		"custom/arrow-right4",
@@ -221,22 +221,21 @@
   },
 
 	"mpris": {
-			"format": "{icon}  <span>{}</span>",
 			"return-type": "json",
-			"max-length": 50,
+			"max-length": 30,
 			"on-click-middle": "playerctl play-pause",
 			"on-click": "playerctl previous",
 			"on-click-right": "playerctl next",
-			"format": "DEFAULT: {player_icon} {dynamic}",
-				"format-paused": "DEFAULT: {status_icon} <i>{dynamic}</i>",
-				"player-icons": {
-					"default": "▶",
-					"mpv": "🎵"
-				},
-				"status-icons": {
-					"paused": "⏸",
-					"stopped": "■",
-				},
+			"format": "{player_icon} {artist}, <i>{title}</i> - <i>{album}</i>",
+			"format-paused": "{status_icon} {artist}, <i>{title}</i> - <i>{album}</i>",
+			"player-icons": {
+				"default": "▶",
+				"mpv": "🎵"
+			},
+			"status-icons": {
+				"paused": "⏸",
+				"stopped": "■",
+			},
 				// "ignored-players": ["firefox"]
 		},
 

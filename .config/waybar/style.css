@@ -48,7 +48,7 @@
 @define-color temp	@brgreen;
 @define-color battery	@green;
 @define-color layout	@bryellow;
-@define-color keyboard-status	@brorange;
+@define-color keyboard-state @brorange;
 @define-color date	@black;
 @define-color time	@white;
 @define-color player @gray;
@@ -204,8 +204,8 @@
 	color: @black;
 }
 
-#keyboard-status {
-	background: @keyboard-status;
+#keyboard-state {
+	background: @keyboard-state;
 	color: @white;
 }
 
@@ -309,12 +309,12 @@
 #custom-arrow-right2 {
 	font-size: 11pt;
 	color: @layout;
-	background: @keyboard-status;
+	background: @keyboard-state;
 }
 
 #custom-arrow-right3 {
 	font-size: 11pt;
-	color: @keyboard-status;
+	color: @keyboard-state;
 	background: @unfocused;
 }
 

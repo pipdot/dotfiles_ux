@@ -264,7 +264,7 @@ endfunction
 " noremap <silent> <C-S-l> :call WindowSwapInDirection('l')<cr>
 
 "}}}
-"Plug-ins (vim-plug) {{{
+"Plug-ins (vim-plug) {{
 " --------------------------------------------------------------------
 call plug#begin(s:myconfigdir.'/plugged')
 " The default plugin directory will be as follows:
@@ -305,6 +305,8 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Unmanaged plugin (manually installed and updated)
 " Plug '~/my-prototype-plugin'
 "
+" BÉPO support
+" Plug 'michamos/vim-bepo'
 " wl-clipboard integration
 Plug 'jasonccox/vim-wayland-clipboard'
 " Vim stuff
