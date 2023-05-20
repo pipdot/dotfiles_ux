@@ -27,5 +27,5 @@ modules:
   - repo: git@github.com:zap-zsh/zap.git
     pull_only: true
     link: non
-    location: ~/.config/profile/zsh/zap
+    location: ~/.local/share/zap
     name: zap
