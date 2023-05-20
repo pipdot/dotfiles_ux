@@ -140,14 +140,6 @@ if [ -s "$nvm_dir/nvm.sh" ]; then
 fi
 
 # --------------------------------------------------------------------
-# rbenv
-
-# TODO: find it
-if command -v rbenv &> /dev/null; then
-  eval "$(rbenv init - bash)"
-fi
-
-# --------------------------------------------------------------------
 # .NET
 # TODO: find it
 dotnet_dir="$HOME/.dotnet"

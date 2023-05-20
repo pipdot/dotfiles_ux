@@ -50,7 +50,4 @@ export GH_BROWSER="gtk-launch firefox"
 
 alias rfind='find . -regextype posix-extended -iregex'
 
-alias xq="xbps-query -Rs"
-alias sxi="sudo xbps-install -S"
-
 # vim: ft=sh :

@@ -25,6 +25,3 @@ modules:
     location: ~/.config/profile/zsh/oh-my-zsh
     name: oh-my-zsh
 
-hooks:
-    after_sync:
-      - ~/.config/profile/zsh/oh-my-zsh/tools/install.sh
