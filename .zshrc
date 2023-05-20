@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH_ROOT="$HOME/.config/profile/zsh"
+export ZAP_ROOT="$HOME/.local/share/zap"
 # export ZSH="$ZSH_ROOT/oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -88,7 +89,7 @@ ZSH_CUSTOM="$ZSH_ROOT/custom"
 # source $ZSH/oh-my-zsh/oh-my-zsh.sh
 #
 ## ZAP
-source $ZSH_ROOT/zap/zap.zsh
+source $ZAP_ROOT/zap.zsh
 
 plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"
