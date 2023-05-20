@@ -3,7 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH_ROOT="$HOME/.config/profile/zsh"
-export ZSH="$ZSH_ROOT/oh-my-zsh"
+# export ZSH="$ZSH_ROOT/oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -72,24 +72,34 @@ ZSH_CUSTOM="$ZSH_ROOT/custom"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  command-not-found
-  aliases
-  colorize
-  vi-mode
-  fzf
-  zsh-navigation-tools
-  git
-  thefuck
-  tmux
-  tmuxinator
-  vscode
-)
+# plugins=(
+#   command-not-found
+#   aliases
+#   colorize
+#   vi-mode
+#   fzf
+#   zsh-navigation-tools
+#   git
+#   thefuck
+#   tmux
+#   tmuxinator
+#   vscode
+# )
+# source $ZSH/oh-my-zsh/oh-my-zsh.sh
+#
+## ZAP
+source $ZSH_ROOT/zap/zap.zsh
 
-source $ZSH/oh-my-zsh.sh
+plug "zsh-users/zsh-autosuggestions"
+plug "zap-zsh/supercharge"
+plug "zap-zsh/zap-prompt"
+plug "zsh-users/zsh-syntax-highlighting"
+
+# Load and initialise completion system
+autoload -Uz compinit
+compinit
 
 # User configuration
-#
 
 # powerline-status
 # MUST BE SOURCED AFTER oh-my-zsh,
