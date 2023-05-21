@@ -94,15 +94,28 @@ source $ZAP_ROOT/zap.zsh
 plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"
 plug "zap-zsh/zap-prompt"
-plug "zsh-users/zsh-syntax-highlighting"
+# plug "zsh-users/zsh-syntax-highlighting"
+plug "zdharma-continuum/fast-syntax-highlighting"
 plug "zsh-users/zsh-completions"
+plug "MichaelAquilina/zsh-you-should-use"
+plug "zpm-zsh/clipboard"
+# plug "jeffreytse/zsh-vi-mode"
+#
+plug "zpm-zsh/tmux"
+plug "Atlas34/fzf-plugin"
+plug "pschmitt/emoji-fzf.zsh"
+plug "zimfw/asdf"
+plug "mdumitru/git-aliases"
+plug "dashixiong91/zsh-vscode"
 # TODO: find out how to install plug-in from oh-my-zsh.
+# see list here: https://github.com/unixorn/awesome-zsh-plugins#generic-zsh
 
 # Load and initialise completion system
 autoload -Uz compinit
 compinit
 
 # User configuration
+TMUX_MOTD=false
 
 # powerline-status
 # MUST BE SOURCED AFTER oh-my-zsh,
