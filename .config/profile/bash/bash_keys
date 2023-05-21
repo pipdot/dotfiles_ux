@@ -2,7 +2,7 @@
 
 # Fzf Key bindings
 # ------------
-if ! [ -z $FZF_SHELL_ROOT ]; then
-  . "$FZF_SHELL_ROOT/key-bindings.bash"
-fi
+# if ! [ -z ${FZF_SHELL_ROOT}]; then
+#   source "${FZF_SHELL_ROOT}/key-bindings.bash"
+# fi
 

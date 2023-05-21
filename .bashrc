@@ -2,12 +2,12 @@
 # if the shell is non-interactive.
 [ -f "$HOME/.profile" ] && . "$HOME/.profile"
 # Also load bash-specific exports
-source_profile_module "bash/bash_exports"
+source_shell_module "bash/bash_exports"
 [ -z "$PS1" ] && return
 
 # module loading (Order matters) :ARCANE:
-source_profile_module "bash/bash_aliases" "bash/bash_functions" "bash/bash_keys" "bash/bash_browsing" "bash/bash_prompt"
-source_profile_file "bash/bash_completion"
+source_shell_module "bash/bash_aliases" "bash/bash_functions" "bash/bash_keys" "bash/bash_browsing" "bash/bash_prompt"
+source_shell_file "bash/bash_completion"
 
 # FIXME: RUN TMUX AT ALACRITTY STARTUP INSTEAD
 # Run tmux if found

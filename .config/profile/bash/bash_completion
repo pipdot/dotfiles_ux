@@ -1,25 +1,25 @@
 #!/bin/bash
 
 # Noope, it seems to source the file directly and causes some errors.
-# export BASH_COMPLETION_USER_FILE="$PROFILE_CONFIG_DIR/bash/bash_completion_ext"
+# export BASH_COMPLETION_USER_FILE="$SHELL_PROFILE_CONFIG_DIR/bash/bash_completion_ext"
 
 # Use bash-completion, if available
 # see: https://github.com/scop/bash-completion
 # bash_completion_file="/usr/share/bash-completion/bash_completion"
 # [[ -f "$bash_completion_file" ]] && . "$bash_completion_file"
 
-source_profile_module "bash/bash_completion_ext"
+source_shell_module "bash/bash_completion_ext"
 
 # ---------------
 # Enable fzf completion
 # Auto-completion
-if ! [ -z $FZF_SHELL_ROOT ]; then
-  [[ $- == *i* ]] && . "$FZF_SHELL_ROOT/completion.bash" &> /dev/null
-fi
+# if ! [ -z $FZF_SHELL_ROOT ]; then
+#   [[ $- == *i* ]] && . "$FZF_SHELL_ROOT/completion.bash" &> /dev/null
+# fi
 
 # ---------------
 # Enable NVM completion
-if ! [ -z $NVM_DIR ]; then
-  . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-fi
+# if ! [ -z $NVM_DIR ]; then
+#   . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# fi
 

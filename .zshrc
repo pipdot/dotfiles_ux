@@ -90,6 +90,9 @@ ZSH_CUSTOM="$ZSH_ROOT/custom"
 #
 ## ZAP
 source $ZAP_ROOT/zap.zsh
+#
+# plug-ins configuration
+TMUX_MOTD=false
 
 plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"
@@ -114,9 +117,8 @@ plug "dashixiong91/zsh-vscode"
 autoload -Uz compinit
 compinit
 
-# User configuration
-TMUX_MOTD=false
 
+# User configuration
 # powerline-status
 # MUST BE SOURCED AFTER oh-my-zsh,
 # otherwise it won't work.
