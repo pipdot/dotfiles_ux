@@ -1,8 +1,6 @@
 " vim : foldmethod=marker :
 " AUTHOR: Vicente Adolfo Bolea Sanchez
 " Dependencies:
-"  - It requires to have the following env variables:
-"    2. $GIT_AUTHOR_NAME
 "
 " Quick Predefined leader Maps
 " ============================
@@ -91,6 +89,14 @@ set ttyfast
 set noerrorbells
 set novisualbell
 set lazyredraw
+
+" Auto reload files
+" see: https://unix.stackexchange.com/a/383044
+" on buffer change, terminal focus,
+" or when cursor stops moving for 4 sec
+set autoread
+au FocusGained,BufEnter * :checktime
+au CursorHold, CursorHoldI * checktime
 
 " More options
 set hlsearch
