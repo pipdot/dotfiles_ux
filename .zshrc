@@ -136,10 +136,15 @@ plug "$ZSH_CUSTOM/zsh-fixkeys/fixkeys.plugin.zsh"
 # User configuration
 
 # zmv
+# for future use,
+# batch renaming of nested files with zmv,
+# see: https://benfrain.com/batch-rename-nested-files-and-folders-on-macos-with-zsh/
 autoload -U zmv
-alias zmv='zmv -W'
-alias zcp='zmv -W -p cp'
-alias zln='zmv -W -p ln'
+alias zcp='zmv -p cp'
+alias zln='zmv -p ln'
+alias gmv='noglob zmv -W'
+alias gcp='noglob zmv -W -p cp'
+alias gln='noglob zmv -W -p ln'
 
 # powerline-status
 # MUST BE SOURCED AFTER oh-my-zsh,
