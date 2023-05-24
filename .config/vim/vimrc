@@ -338,8 +338,12 @@ Plug 'dense-analysis/ale'
 Plug 'sheerun/vim-polyglot'
 " Completion
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --all' }
+
+"""
 " Python specifics
 Plug 'Vimjas/vim-python-pep8-indent'
+" Markdown
+Plug 'gabrielelana/vim-markdown'
 
 
 Plug 'mbbill/undotree'

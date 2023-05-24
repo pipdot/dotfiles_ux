@@ -1,8 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 source ~/.profile
+
 # Path to your oh-my-zsh installation.
-export ZSH_ROOT="$HOME/.config/profile/zsh"
+export ZSH_ROOT="$HOME/.config/shell/zsh"
 export ZAP_ROOT="$HOME/.local/share/zap"
 # export ZSH="$ZSH_ROOT/oh-my-zsh"
 
@@ -66,7 +67,7 @@ ZSH_THEME="robbyrussell"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
-ZSH_CUSTOM="$ZSH_ROOT/custom"
+ZSH_CUSTOM="$ZSH_ROOT/plugins"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -94,31 +95,52 @@ source $ZAP_ROOT/zap.zsh
 # plug-ins configuration
 TMUX_MOTD=false
 
-plug "zsh-users/zsh-autosuggestions"
-plug "zap-zsh/supercharge"
-plug "zap-zsh/zap-prompt"
-# plug "zsh-users/zsh-syntax-highlighting"
-plug "zdharma-continuum/fast-syntax-highlighting"
+# Load and initialise completion system
 plug "zsh-users/zsh-completions"
+autoload -Uz compinit
+compinit
+
+# must be after completion
+# and before autosuggestions and highlights
+plug "Aloxaf/fzf-tab"
+
+plug "zap-zsh/supercharge"
+# plug "zsh-users/zsh-syntax-highlighting"
+plug "zsh-users/zsh-autosuggestions"
+plug "zdharma-continuum/fast-syntax-highlighting"
+#
 plug "MichaelAquilina/zsh-you-should-use"
 plug "zpm-zsh/clipboard"
-# plug "jeffreytse/zsh-vi-mode"
 #
+# plug "jeffreytse/zsh-vi-mode"
+# plug "softmoth/zsh-vim-mode"
+plug "zap-zsh/vim"
+# Apparently zsh does not set delete key binding correctly?
+# this plug-in does it for us.
+# plug "kytta/ohmyzsh-key-bindings"
 plug "zpm-zsh/tmux"
-plug "Atlas34/fzf-plugin"
+# plug "Atlas34/fzf-plugin"
 plug "pschmitt/emoji-fzf.zsh"
 plug "zimfw/asdf"
 plug "mdumitru/git-aliases"
 plug "dashixiong91/zsh-vscode"
+# fix del key and others
+plug "$ZSH_CUSTOM/zsh-fixkeys/fixkeys.plugin.zsh"
+# this also work but zap complains about
+# it not being activated...
+# plug "$ZSH_CUSTOM/zsh-fixkeys"
 # TODO: find out how to install plug-in from oh-my-zsh.
 # see list here: https://github.com/unixorn/awesome-zsh-plugins#generic-zsh
 
-# Load and initialise completion system
-autoload -Uz compinit
-compinit
-
 
 # User configuration
+
+# zmv
+autoload -U zmv
+alias zmv='zmv -W'
+alias zcp='zmv -W -p cp'
+alias zln='zmv -W -p ln'
+
 # powerline-status
 # MUST BE SOURCED AFTER oh-my-zsh,
 # otherwise it won't work.
