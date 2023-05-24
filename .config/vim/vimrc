@@ -323,7 +323,8 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-unimpaired'
 " Switching between two panes
 Plug 'wesQ3/vim-windowswap'
-
+" Delete buffer without deleting pane
+Plug 'qpkorr/vim-bufkill'
 
 " Utility for multiple languages
 Plug 'liuchengxu/vista.vim'
@@ -369,7 +370,6 @@ if has('python3')
 endif
 
 "}}}
-
 "YouCompleteMe {{{
 " ---------------------------------------------------------------------
 " Make Vim always render the sign column:
@@ -410,7 +410,6 @@ let g:ycm_enable_diagnostic_highlighting = 1
 let g:ycm_echo_current_diagnostic = 1
 " Echo line's diagnostic that cursor is on
 "}}}
-
 "ALE / YCM {{{
 "
 let g:ale_linters = {'python': 'all'}
@@ -452,7 +451,24 @@ let g:NERDTreeHighlightCursorline = 1
 let g:NERDTreeShowBookmarks = 1
 let g:NERDTreeDirArrows = 0
 " }}}
+"
+"bufkill "{{{
+" ---------------------------------------------------------------------
+" Turn off default <leader>bb, <leader>bd, etc. mappings (default: 1)
+let g:BufKillCreateMappings = 1
 
+" Override default <C-^> behavior for swapping between alternate buffers (default: 0)
+let g:BufKillOverrideCtrlCaret = 1
+
+" Modify the command prefix if it conflicts with other plugins
+" The below changes BD to DD, BB to DB, etc. (default: 'B')
+" let g:BufKillCommandPrefix = 'D'
+
+" If the buffer you want to kill is in many windows, the following option
+" governs what to do (default: 'confirm', options: 'confirm'/'kill'/'cancel')
+let g:BufKillActionWhenBufferDisplayedInAnotherWindow = 'kill'
+" }}}
+"
 "colourschemes (Edge) "{{{
 " ---------------------------------------------------------------------
 " let g:edge_style = 'aura'
