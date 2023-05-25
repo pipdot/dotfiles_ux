@@ -1,7 +1,7 @@
 
 font $uifont $uifontsize
 # see: https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland
-exec_always ". ~/.config/profile/gtk_settings"
+exec_always ". ~/.config/shell/gtk_settings"
 
 # Opacity
 # opacity set $opacityactive

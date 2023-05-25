@@ -22,7 +22,7 @@ modules:
       #  - repo: git@github.com:ohmyzsh/ohmyzsh.git
       #    pull_only: true
       #    link: none
-      #    location: ~/.config/profile/zsh/oh-my-zsh
+      #    location: ~/.config/shell/zsh/oh-my-zsh
       #    name: oh-my-zsh
   - repo: git@github.com:zap-zsh/zap.git
     pull_only: true
