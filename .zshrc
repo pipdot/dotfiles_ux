@@ -119,7 +119,7 @@ plug "zap-zsh/vim"
 # this plug-in does it for us.
 # plug "kytta/ohmyzsh-key-bindings"
 plug "zpm-zsh/tmux"
-# plug "Atlas34/fzf-plugin"
+plug "Atlas34/fzf-plugin"
 plug "pschmitt/emoji-fzf.zsh"
 #
 plug 'ptavares/zsh-direnv'
