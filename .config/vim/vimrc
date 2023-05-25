@@ -317,6 +317,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'jasonccox/vim-wayland-clipboard'
 " Vim stuff
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-eunuch'
 Plug 'preservim/vimux'
 " Key-binding
 Plug 'christoomey/vim-tmux-navigator'
