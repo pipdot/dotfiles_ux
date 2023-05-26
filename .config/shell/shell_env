@@ -16,7 +16,7 @@ export XDG_DATA_DIR=$XDG_DATA_HOME
 export XDG_CACHE_DIR=$XDG_CACHE_HOME
 
 # Preferred character encoding
-export LANG=en_US.utf-8
+# export LANG=en_US.utf-8
 
 # preferred terminal (non standard value)
 # used by i3-sensible-terminal
@@ -157,7 +157,7 @@ fi
 # QT/Gnome/GTK theming stuff
 # export QT_QPA_PLATFORMTHEME='gnome'
 export QT_STYLE_OVERRIDE='kvantum'
-source_shell_file "gtk_settings"
+# source_shell_file "gtk_settings"
 # --------------------------------------------------------------------
 # Audio
 # for some reason one installation of Ardour doesn't look in user-installed lv2 dir.
