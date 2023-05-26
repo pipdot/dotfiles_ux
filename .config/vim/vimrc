@@ -131,6 +131,14 @@ endif
 
 " }}}
 " filetype settings {{{
+
+" for vim-devicons
+" is the default in neovim
+" INSTEAD OF SETTING IT HERE:
+" declare LANG=foo_FOO.utf-8 env var somewhere to
+" and vim should pick it up.
+" set encoding = utf-8
+
 autocmd FileType html setlocal sw=2 ts=2 noexpandtab autoindent
 autocmd FileType Makefile setlocal sw=2 ts=2 noexpandtab
 autocmd FileType java setlocal sw=4 ts=4 expandtab
@@ -159,11 +167,11 @@ let mapleader = " "
 " set langnoremap
 " set langmap=ch,tj,sk,rl
 
-" This is VIM we don't need arrow keys
-noremap  <Up>     <NOP>
-noremap  <Down>   <NOP>
-noremap  <Left>   <NOP>
-noremap  <Right>  <NOP>
+" TODO: remap everything hjkl to also use arrow keys.
+" noremap  <Up>     <NOP>
+" noremap  <Down>   <NOP>
+" noremap  <Left>   <NOP>
+" noremap  <Right>  <NOP>
 nnoremap Q <Nop>
 
 nnoremap <silent> <F8> :TagbarToggle<Enter>
@@ -293,7 +301,9 @@ call plug#begin(s:myconfigdir.'/plugged')
 " Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree' | Plug 'PhilRunninger/nerdtree-visual-selection' | Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' }
+Plug 'ryanoasis/vim-devicons' | Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
 " Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
 " Using a non-default branch
