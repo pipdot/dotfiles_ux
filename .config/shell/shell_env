@@ -60,7 +60,15 @@ export VIMINIT="set nocp | source ${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc"
 
 # --------------------------------------------------------------------
 # Font
-export FONT_UI="Fira Code"
+# # FiraCode should be somewhere in ~/.local/share/fonts/
+export FONT="FiraCode Nerd Font"
+export FONT_VARIANT="Medium"
+export FONT_SIZE=11
+# # Font
+# set $uifont ""
+# set $uifontvariant "Medium"
+# # set $uifont "pango:Inconsolata"
+# set $uifontsize 11
 
 # --------------------------------------------------------------------
 # FZF

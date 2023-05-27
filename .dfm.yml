@@ -13,17 +13,12 @@ modules:
     name: tpm
   - repo: git@github.com:junegunn/vim-plug.git
     pull_only: true
-    link: post
+    link: none
     mappings:
       - match: '\/plug\.vim$'
         target_dir: ~/.config/vim/autoload/
       # skip everything else
     name: vim-plug
-      #  - repo: git@github.com:ohmyzsh/ohmyzsh.git
-      #    pull_only: true
-      #    link: none
-      #    location: ~/.config/shell/zsh/oh-my-zsh
-      #    name: oh-my-zsh
   - repo: git@github.com:zap-zsh/zap.git
     pull_only: true
     link: non

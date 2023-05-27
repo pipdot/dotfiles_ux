@@ -18,3 +18,5 @@ bar {
 # exec "python $POWERLINE_ROOT/bindings/lemonbar/powerline-lemonbar.py --i3 -- -d"
 # exec "powerline-lemonbar"
 #
+titlebar_border_thickness 0
+titlebar_padding 0

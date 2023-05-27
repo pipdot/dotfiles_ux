@@ -4,7 +4,7 @@
 # see: https://github.com/FreeSlave/desktopfile
 # so we use our own executable from set in .local/bin
 TryExec=vim
-Exec=launch_in_terminal_tmux ranger %F
+Exec=launch_in_terminal_tmux vim %F
 Terminal=true
 Type=Application
 # Translators: This is the Application Name used in the Vim desktop file

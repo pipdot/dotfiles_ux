@@ -20,9 +20,14 @@ set $timeoutlock 1800
 set $timeoutdisplayoff 3600
 
 # Font
-# set $uifont "pango:Fira Code"
-set $uifont "pango:Inconsolata"
-set $uifontsize 11
+# FiraCode should be somewhere in ~/.local/share/fonts/
+# But it can't just read env vars so..
+# set $uifont $FONT
+# set $uifontvariant $FONT_VARIANT
+# set $uifontsize $FONT_SIZE
+set $uifont "FiraCode Nerd Font"
+set $uifontvariant "Regular"
+set $uifontsize 10
 # Colours
 set $highlightcolour "#3daee9"
 set $promptcolour "#18b218"

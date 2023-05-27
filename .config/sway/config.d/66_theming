@@ -1,5 +1,5 @@
 
-font $uifont $uifontsize
+font "pango:$uifont" "$uifontvariant" $uifontsize
 # see: https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland
 exec_always ". ~/.config/shell/gtk_settings"
 
