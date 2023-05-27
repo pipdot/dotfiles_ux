@@ -122,9 +122,9 @@ plug "zpm-zsh/tmux"
 plug "Atlas34/fzf-plugin"
 plug "pschmitt/emoji-fzf.zsh"
 #
-plug 'ptavares/zsh-direnv'
 # this one requires that compinit be called before and not after.
-plug "zimfw/asdf"
+# plug "zimfw/asdf"
+plug 'redxtech/zsh-asdf-direnv'
 #
 plug "mdumitru/git-aliases"
 plug "dashixiong91/zsh-vscode"
@@ -138,8 +138,9 @@ plug "$ZSH_CUSTOM/zsh-fixkeys/fixkeys.plugin.zsh"
 
 
 # User configuration
-# use asdf-direnv?
-source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
+#  use asdf-direnv?
+#
+# source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
 
 # zmv
 # for future use,
