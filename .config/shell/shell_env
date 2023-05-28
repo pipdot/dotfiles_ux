@@ -133,30 +133,8 @@ if ! [ -z $pip_root ]; then
 fi
 
 # -------------------------------------------------------------------
-# rustup / cargo
-# export RUSTUP_ROOT="$HOME/.cargo"
-# if command -v $RUSTUP_ROOT/bin/cargo 1>/dev/null 2>&1; then
-#   export PATH="$PATH:$RUSTUP_ROOT/bin"
-# fi
-# 
-# --------------------------------------------------------------------
-# NVM
-# TODO: find it as we do with FZF.
-# nvm_dir="$HOME/.nvm"
-# if [ -s "$nvm_dir/nvm.sh" ]; then
-#   export NVM_DIR=$nvm_dir
-#   . "$NVM_DIR/nvm.sh"  # This loads nvm
-# fi
-
-# --------------------------------------------------------------------
-# .NET
-# TODO: find it
-# dotnet_dir="$HOME/.dotnet"
-# if command -v "$dotnet_dir/dotnet" &> /dev/null; then
-#   export DOTNET_ROOT=$dotnet_dir
-#   export PATH="$PATH:$DOTNET_ROOT"
-# fi
-
+# ASDF
+export ASDF_CONFIG_FILE="~/.config/asdf/asdfrc"
 
 # --------------------------------------------------------------------
 # Qt

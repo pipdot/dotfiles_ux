@@ -17,7 +17,7 @@ modules:
     mappings:
       - match: '\/plug\.vim$'
         target_dir: ~/.config/vim/autoload/
-      # skip everything else
+      # todo: skip everything else
     name: vim-plug
   - repo: git@github.com:zap-zsh/zap.git
     pull_only: true
