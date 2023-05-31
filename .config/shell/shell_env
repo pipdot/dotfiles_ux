@@ -18,26 +18,6 @@ export XDG_CACHE_DIR=$XDG_CACHE_HOME
 # Preferred character encoding
 # export LANG=en_US.utf-8
 
-# preferred terminal (non standard value)
-# used by i3-sensible-terminal
-export TERMINAL=alacritty
-# tmux overwrites this value and won't work otherwise.
-# So we instead use a non-standard TERMINAL value
-# just so that we can know we are running tmux inside alacritty.
-# This value is used in my own desktop entries .local/share/applications/*.
-# It defaults to $TERM if we're not in alacritty
-# see .config/alacritty/alacritty.yml
-export SOURCE_TERMINAL=${SOURCE_TERMINAL:-$TERM}
-terminal_name=$(echo $SOURCE_TERMINAL | cut -d'-' -f1)
-# TODO
-terminal_color_mode=$(echo $SOURCE_TERMINAL | cut -d'-' -s -f2)
-# find the appropriate 'run programme in that terminal' command:
-case $terminal_name in
- alacritty)
-   terminal_run_command="$SOURCE_TERMINAL -e"
-esac
-export TERMINAL_RUN_COMMAND=${terminal_run_command:-$SOURCE_TERMINAL}
-#
 export EDITOR=vim
 export HISTCONTROL=ignoreboth
 # 16 KiL
@@ -57,88 +37,28 @@ export SVDIR="$HOME/.var/service"
 # export VIMINIT='let $MYVIMRC="${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc" | source $MYVIMRC'
 export VIMINIT="set nocp | source ${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc"
 
-
-# --------------------------------------------------------------------
-# Font
-# # FiraCode should be somewhere in ~/.local/share/fonts/
-export FONT="FiraCode Nerd Font"
-export FONT_VARIANT="Medium"
-export FONT_SIZE=11
-# # Font
-# set $uifont ""
-# set $uifontvariant "Medium"
-# # set $uifont "pango:Inconsolata"
-# set $uifontsize 11
-
-# --------------------------------------------------------------------
-# FZF
-# Setup fzf
-# find_fzf_root() {
-#   if command -v $1 &> /dev/null; then
-#     fzf_path=$(command -v $1)
-#     fzf_root=$(dirname "$fzf_path")
-#     echo $fzf_root
-#   fi
-# }
-# # look for fzf in different locations
-# fzf_root=$(find_fzf_root "fzf") # already in PATH, installed through distro
-# if [ -z $fzf_root ]; then
-#  # look for it in user's home, manually installed
-#   fzf_root=$(find_fzf_root ~/.fzf/bin/fzf)
-#   export FZF_SHELL_ROOT="$(dirname $fzf_root)/shell"
-#   export PATH="$fzf_root:$PATH"
-# else
-#   # handled by distribution, probably?
-#   fzf_root="/usr/share/fzf"
-#   if [ -d "$fzf_root" ]; then
-#     export FZF_SHELL_ROOT=$fzf_root
-#   fi
-# fi
-# 
-export FZF_DEFAULT_COMMAND='fd --type f'
-export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border --inline-info'
-# FZF_CTRL_T_COMMAND=
-# FZF_CTRL_T_OPTS=
-# FZF_CTRL_R_OPTS=
-# FZF_ALT_C_COMMAND=
-# FZF_ALT_C_OPTS=
-export FZF_TMUX_OPTS='-d 40%'
-
 # -------------------------------------------------------------------
-# Pyenv
-# setup path if pyenv executable is found in expected location.
-# export PYENV_ROOT="$HOME/.local/pyenv"
-# if command -v $PYENV_ROOT/bin/pyenv 1>/dev/null 2>&1; then
-#   export PATH="$PATH:$PYENV_ROOT/bin"
-#   eval "$(pyenv init -)"
-# fi
-# Activate virtual env for stuff
-# export DOTPYENV_ROOT="$HOME/.local/venv/dot"
-# if [ -f "$DOTPYENV_ROOT/bin/activate" ]; then
-# . "$DOTPYENV_ROOT/bin/activate"
-# fi
+# ASDF
+export ASDF_CONFIG_FILE="~/.config/asdf/asdfrc"
+
 # --------------------------------------------------------------------
+# Powerline
+# Should also be sourced by non-interative shells!!
+# since it will be used to launch wlroots and other wms.
 # get powerline-status pip package install folder
 # pip_root=$(pip show powerline-status | awk -F': ' '/Location: /{print $2}')
 get_pip_package_location() {
   echo $(pip show $1 | grep -Po 'Location: \K.*')
 }
-# Prefer using powerline-status fork
-# from: https://github.com/PH111P/powerline
-# NOPE
 powerline_package="powerline-status"
 pip_root=$(get_pip_package_location $powerline_package)
 if ! [ -z $pip_root ]; then
   export POWERLINE_ROOT="$pip_root/powerline"
 fi
 
-# -------------------------------------------------------------------
-# ASDF
-export ASDF_CONFIG_FILE="~/.config/asdf/asdfrc"
 
 # --------------------------------------------------------------------
 # Qt
-
 # --------------------------------------------------------------------
 # QT/Gnome/GTK theming stuff
 # export QT_QPA_PLATFORMTHEME='gnome'

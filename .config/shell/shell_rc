@@ -1,0 +1,72 @@
+#!/bin/sh
+
+# This file should ONLY be sourced
+# by interactive shells.
+
+# preferred terminal (non standard value)
+# used by i3-sensible-terminal
+export TERMINAL=alacritty
+# tmux overwrites this value and won't work otherwise.
+# So we instead use a non-standard TERMINAL value
+# just so that we can know we are running tmux inside alacritty.
+# This value is used in my own desktop entries .local/share/applications/*.
+# It defaults to $TERM if we're not in alacritty
+# see .config/alacritty/alacritty.yml
+export SOURCE_TERMINAL=${SOURCE_TERMINAL:-$TERM}
+terminal_name=$(echo $SOURCE_TERMINAL | cut -d'-' -f1)
+# TODO
+terminal_color_mode=$(echo $SOURCE_TERMINAL | cut -d'-' -s -f2)
+# find the appropriate 'run programme in that terminal' command:
+case $terminal_name in
+ alacritty)
+   terminal_run_command="$SOURCE_TERMINAL -e"
+esac
+export TERMINAL_RUN_COMMAND=${terminal_run_command:-$SOURCE_TERMINAL}
+
+# --------------------------------------------------------------------
+# Font
+# # FiraCode should be somewhere in ~/.local/share/fonts/
+export FONT="FiraCode Nerd Font"
+export FONT_VARIANT="Medium"
+export FONT_SIZE=11
+# # Font
+# set $uifont ""
+# set $uifontvariant "Medium"
+# # set $uifont "pango:Inconsolata"
+# set $uifontsize 11
+
+# --------------------------------------------------------------------
+# FZF
+# Setup fzf
+# find_fzf_root() {
+#   if command -v $1 &> /dev/null; then
+#     fzf_path=$(command -v $1)
+#     fzf_root=$(dirname "$fzf_path")
+#     echo $fzf_root
+#   fi
+# }
+# # look for fzf in different locations
+# fzf_root=$(find_fzf_root "fzf") # already in PATH, installed through distro
+# if [ -z $fzf_root ]; then
+#  # look for it in user's home, manually installed
+#   fzf_root=$(find_fzf_root ~/.fzf/bin/fzf)
+#   export FZF_SHELL_ROOT="$(dirname $fzf_root)/shell"
+#   export PATH="$fzf_root:$PATH"
+# else
+#   # handled by distribution, probably?
+#   fzf_root="/usr/share/fzf"
+#   if [ -d "$fzf_root" ]; then
+#     export FZF_SHELL_ROOT=$fzf_root
+#   fi
+# fi
+#
+export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border --inline-info'
+# FZF_CTRL_T_COMMAND=
+# FZF_CTRL_T_OPTS=
+# FZF_CTRL_R_OPTS=
+# FZF_ALT_C_COMMAND=
+# FZF_ALT_C_OPTS=
+export FZF_TMUX_OPTS='-d 40%'
+
+# vim: ft=sh :
