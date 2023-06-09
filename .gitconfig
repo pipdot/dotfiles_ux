@@ -20,8 +20,6 @@
   added = green bold
   changed = yellow bold
   untracked = red bold
-[pull]
-  rebase = false
 [diff]
   tool = vimdiff
 [merge]
@@ -29,10 +27,12 @@
   log = true
 [push]
   default = current
-[url "ssh://git@github.com/"]
-  insteadOf = https://github.com/
-[url "ssh://git@gitlab.com/"]
-  insteadOf = https://gitlab.com/
+#[pull]
+#  rebase = false
+#[url "ssh://git@github.com/"]
+#  insteadOf = https://github.com/
+#[url "ssh://git@gitlab.com/"]
+#  insteadOf = https://gitlab.com/
 [alias]
   a = add --all
   ai = add -i
