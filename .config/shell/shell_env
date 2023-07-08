@@ -47,6 +47,13 @@ export PATH="$HOME/.local/bin:$PATH"
 # runit user services
 export SVDIR="$HOME/.var/service"
 
+
+# --------------------------------------------------------------------
+# GPG
+# see: https://www.gnupg.org/documentation/manuals/gnupg/Invoking-GPG_002dAGENT.html
+# required line for GPG-Agent
+export GPG_TTY=$(tty)
+
 # --------------------------------------------------------------------
 # Vim
 # move vim's stuff out of $HOME
