@@ -1,9 +1,0 @@
-[Desktop Entry]
-Categories=AudioVideo;
-Name=pipewire-pulse
-Comment=Pipewire-pulse bridge
-Exec=pipewire-pulse
-StartupNotify=false
-Terminal=false
-Type=Application
-
