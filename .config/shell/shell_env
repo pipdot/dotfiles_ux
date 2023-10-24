@@ -66,20 +66,22 @@ export VIMINIT="set nocp | source ${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc"
 # -------------------------------------------------------------------
 # ASDF
 export ASDF_CONFIG_FILE="~/.config/asdf/asdfrc"
-
+if command -v asdf > /dev/null; then
+  # tell flutter where to find install
+  export FLUTTER_ROOT="$(asdf where flutter)"
+fi
 # --------------------------------------------------------------------
 # Powerline
 # Should also be sourced by non-interative shells!!
 # since it will be used to launch wlroots and other wms.
-# get powerline-status pip package install folder
-# pip_root=$(pip show powerline-status | awk -F': ' '/Location: /{print $2}')
-get_pip_package_location() {
-  echo $(pip show $1 | grep -Po 'Location: \K.*')
+# get powerline-status pipx package install folder
+get_pipx_package_location() {
+  echo $(pipx runpip $1 show $1 | grep -Po 'Location: \K.*')
 }
 powerline_package="powerline-status"
-pip_root=$(get_pip_package_location $powerline_package)
-if ! [ -z $pip_root ]; then
-  export POWERLINE_ROOT="$pip_root/powerline"
+pipx_root=$(get_pipx_package_location $powerline_package)
+if ! [ -z $pipx_root ]; then
+  export POWERLINE_ROOT="$pipx_root/powerline"
 fi
 
 
