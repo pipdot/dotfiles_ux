@@ -14,12 +14,13 @@ modules:
   - repo: git@github.com:junegunn/vim-plug.git
     pull_only: true
     link: none
-    #location: ~/.config/vim/autoload
-    mappings:
-      - match: '*'
-        skip: true
-      - match: '\/plug.vim$'
-        target_dir: ~/.config/vim/autoload/
+    # Mapping were not reimplemented in rust as of 10.0...
+    #mappings:
+    #  - match: '*'
+    #    skip: true
+    #  - match: '\/plug.vim$'
+    #    target_dir: ~/.config/vim/autoload/
+    location: ~/.config/vim/autoload
     name: vim-plug
   - repo: git@github.com:zap-zsh/zap.git
     pull_only: true
