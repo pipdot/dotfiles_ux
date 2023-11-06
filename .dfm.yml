@@ -14,10 +14,11 @@ modules:
   - repo: git@github.com:junegunn/vim-plug.git
     pull_only: true
     link: none
-    mappings:
-      - match: plug.vim
-        target_dir: ~/.config/vim/autoload/
+    #mappings:
+    #- match: plug.vim
+    #target_dir: ~/.config/vim/autoload/
       # todo: skip everything else
+    location: ~/.config/vim/autoload
     name: vim-plug
   - repo: git@github.com:zap-zsh/zap.git
     pull_only: true
