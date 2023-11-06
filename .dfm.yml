@@ -15,9 +15,6 @@ modules:
     pull_only: true
     link: none
     location: ~/.config/vim/autoload
-    mappings:
-      - match: '*'
-      - skip: true
     name: vim-plug
     #Mappings were not reimplemented in 10.0?
     #mappings:
