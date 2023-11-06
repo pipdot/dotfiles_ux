@@ -14,15 +14,13 @@ modules:
   - repo: git@github.com:junegunn/vim-plug.git
     pull_only: true
     link: none
-    location: ~/.config/vim/autoload
+    #location: ~/.config/vim/autoload
     mappings:
       - match: '*'
-      - skip: true
+        skip: true
+      - match: '\/plug.vim$'
+        target_dir: ~/.config/vim/autoload/
     name: vim-plug
-    #Mappings were not reimplemented in 10.0?
-    #mappings:
-      #target_dir: ~/.config/vim/autoload/
-      #todo: skip everything else
   - repo: git@github.com:zap-zsh/zap.git
     pull_only: true
     link: none
