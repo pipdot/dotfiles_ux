@@ -17,9 +17,9 @@ modules:
       # Mappings were not reimplemented in 10.0?
       #target_dir: ~/.config/vim/autoload/
       # todo: skip everything else
-    location: ~/.config/vim/autoload/vim-plug
+    location: ~/.config/vim/autoload
     mappings:
-      - match: '!(plug.vim$)'
+      - match: '*'
       - skip: true
     name: vim-plug
   - repo: git@github.com:zap-zsh/zap.git
