@@ -70,6 +70,7 @@ if command -v asdf > /dev/null; then
   # tell flutter where to find install
   export FLUTTER_ROOT="$(asdf where flutter)"
 fi
+
 # --------------------------------------------------------------------
 # Powerline
 # Should also be sourced by non-interative shells!!

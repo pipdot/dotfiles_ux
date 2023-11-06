@@ -21,6 +21,6 @@ modules:
     name: vim-plug
   - repo: git@github.com:zap-zsh/zap.git
     pull_only: true
-    link: non
+    link: none
     location: ~/.local/share/zap
     name: zap
