@@ -15,7 +15,7 @@ modules:
     pull_only: true
     link: none
     mappings:
-      - match: '\/plug\.vim$'
+      - match: plug.vim
         target_dir: ~/.config/vim/autoload/
       # todo: skip everything else
     name: vim-plug
