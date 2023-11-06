@@ -280,7 +280,7 @@ endfunction
 "}}}
 "Plug-ins (vim-plug) {{
 " --------------------------------------------------------------------
-call vim-plug#plug#begin(s:myconfigdir.'/plugged')
+call vimplug#plug#begin(s:myconfigdir.'/plugged')
 " The default plugin directory will be as follows:
 "   - Vim (Linux/macOS): '~/.vim/plugged'
 "   - Vim (Windows): '~/vimfiles/plugged'
@@ -362,7 +362,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'vim-autoformat/vim-autoformat'
 " Plug  'sainnhe/edge' Initialize plugin system
 
-call vim-plug#plug#end()
+call vimplug#plug#end()
 "}}}
 "Termdebug {{{
 " ---------------------------------------------------------------------
