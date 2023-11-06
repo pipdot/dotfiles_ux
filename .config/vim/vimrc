@@ -343,12 +343,12 @@ Plug 'tpope/vim-commentary'
 " Git
 Plug 'tpope/vim-fugitive'
 " Documentation
-Plug 'kkoomen/vim-doge', { 'do': 'npm i --no-save && npm run build:binary:unix' }
+Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 " Language server, and highlighting
 Plug 'dense-analysis/ale'
 Plug 'sheerun/vim-polyglot'
 " Completion
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --all' }
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --ts-completer --rust-completer' }
 
 """
 " Python specifics
