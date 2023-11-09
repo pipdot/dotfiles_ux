@@ -7,8 +7,8 @@ set $term alacritty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 # FIXME: use wofi in Sway
-set $menu rofi -show drun | dmenu_path | dmenu
-set $filer dolphin | thunar | nautilus
+set $menu rofi -show drun
+set $filer dolphin
 set $browser firefox
 #
 set $backgrounddir ~/.config/i3-common/backgrounds
