@@ -98,4 +98,5 @@ export QT_STYLE_OVERRIDE='kvantum'
 # for some reason one installation of Ardour doesn't look in user-installed lv2 dir.
 export LV2_PATH="${LV2_PATH}:/usr/local/lib/lv2"
 #
+
 # vim: ft=sh :
