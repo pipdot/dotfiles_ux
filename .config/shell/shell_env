@@ -69,7 +69,6 @@ export ASDF_CONFIG_FILE="~/.config/asdf/asdfrc"
   # tell flutter where to find install
   # annoying so disabled.
   # export FLUTTER_ROOT="$(asdf where flutter)"
-fi
 
 # --------------------------------------------------------------------
 # Powerline
