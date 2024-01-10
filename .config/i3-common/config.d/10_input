@@ -1,6 +1,6 @@
 ### Input configuration
-set $kb_layouts "fr"
-set $kb_variants "bepo"
+set $kb_layouts "fr,fr"
+set $kb_variants "bepo,oss"
 #
 # Example configuration:
 #
