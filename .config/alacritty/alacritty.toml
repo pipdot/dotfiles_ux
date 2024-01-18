@@ -1,0 +1,408 @@
+import = ["/home/pip/.config/alacritty/font.toml", "/home/pip/.config/alacritty/alacritty.local.yml", "/home/pip/.config/alacritty/font.local.yml"]
+live_config_reload = true
+
+[colors.bright]
+black = "0x686868"
+blue = "0x59C2FF"
+cyan = "0x95E6CB"
+green = "0xC2D94C"
+magenta = "0xFFEE99"
+red = "0xF07178"
+white = "0xFFFFFF"
+yellow = "0xFFB454"
+
+[colors.normal]
+black = "0x01060E"
+blue = "0x53BDFA"
+cyan = "0x90E1C6"
+green = "0x91B362"
+magenta = "0xFAE994"
+red = "0xEA6C73"
+white = "0xC7C7C7"
+yellow = "0xF9AF4F"
+
+[colors.primary]
+background = "0x0A0E14"
+foreground = "0xB3B1AD"
+
+[env]
+SOURCE_TERMINAL = "alacritty"
+
+[[keyboard.bindings]]
+action = "ToggleViMode"
+key = "Space"
+mode = "~Search"
+mods = "Shift|Control"
+
+[[keyboard.bindings]]
+action = "ScrollToBottom"
+key = "Space"
+mode = "Vi|~Search"
+mods = "Shift|Control"
+
+[[keyboard.bindings]]
+action = "ClearSelection"
+key = "Escape"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "ToggleViMode"
+key = "I"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "ScrollToBottom"
+key = "I"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "ToggleViMode"
+key = "C"
+mode = "Vi|~Search"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ScrollLineUp"
+key = "Y"
+mode = "Vi|~Search"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ScrollLineDown"
+key = "E"
+mode = "Vi|~Search"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ScrollToTop"
+key = "G"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "ScrollToBottom"
+key = "G"
+mode = "Vi|~Search"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ScrollPageUp"
+key = "B"
+mode = "Vi|~Search"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ScrollPageDown"
+key = "F"
+mode = "Vi|~Search"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ScrollHalfPageUp"
+key = "U"
+mode = "Vi|~Search"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ScrollHalfPageDown"
+key = "D"
+mode = "Vi|~Search"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "Y"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "ClearSelection"
+key = "Y"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "ClearSelection"
+key = "Copy"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "ToggleNormalSelection"
+key = "V"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "ToggleLineSelection"
+key = "V"
+mode = "Vi|~Search"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ToggleBlockSelection"
+key = "V"
+mode = "Vi|~Search"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ToggleSemanticSelection"
+key = "V"
+mode = "Vi|~Search"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "Open"
+key = "Return"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "Up"
+key = "K"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "Down"
+key = "J"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "Left"
+key = "H"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "Right"
+key = "L"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "Up"
+key = "Up"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "Down"
+key = "Down"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "Left"
+key = "Left"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "Right"
+key = "Right"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "First"
+key = "Key0"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "Last"
+key = "Key4"
+mode = "Vi|~Search"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "FirstOccupied"
+key = "Key6"
+mode = "Vi|~Search"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "High"
+key = "H"
+mode = "Vi|~Search"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "Middle"
+key = "M"
+mode = "Vi|~Search"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "Low"
+key = "L"
+mode = "Vi|~Search"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "SemanticLeft"
+key = "B"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "SemanticRight"
+key = "W"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "SemanticRightEnd"
+key = "E"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "WordLeft"
+key = "B"
+mode = "Vi|~Search"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "WordRight"
+key = "W"
+mode = "Vi|~Search"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "WordRightEnd"
+key = "E"
+mode = "Vi|~Search"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "Bracket"
+key = "Key5"
+mode = "Vi|~Search"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "SearchForward"
+key = "Slash"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "SearchBackward"
+key = "Slash"
+mode = "Vi|~Search"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "SearchNext"
+key = "N"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "SearchPrevious"
+key = "N"
+mode = "Vi|~Search"
+mods = "Shift"
+
+[[keyboard.bindings]]
+chars = "\u001B[72;6u"
+key = "H"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001B[74;6u"
+key = "J"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001B[75;6u"
+key = "K"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001B[76;6u"
+key = "L"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key = "PageUp"
+mode = "~Alt"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key = "PageDown"
+mode = "~Alt"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key = "Home"
+mode = "~Alt"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key = "End"
+mode = "~Alt"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key = "K"
+mode = "~Vi|~Search"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key = "F"
+mode = "~Search"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key = "F"
+mode = "~Search"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key = "B"
+mode = "~Search"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key = "B"
+mode = "~Search"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key = "Paste"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key = "Copy"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key = "V"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key = "C"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key = "C"
+mode = "Vi|~Search"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key = "C"
+mode = "Vi|~Search"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "ReceiveChar"
+key = "Insert"
+mods = "Shift"
+
+[[mouse.bindings]]
+action = "ReceiveChar"
+mouse = "Right"
+
+[scrolling]
+history = 0
+
+[shell]
+args = ["new", "-As0"]
+program = "tmux"
