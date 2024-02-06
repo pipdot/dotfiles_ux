@@ -209,8 +209,10 @@ ab Wqa wqa
 "nnoremap <silent> <F4> :tabnew<Enter>
 "nnoremap <silent> <ESC><C-S-h> :tabprevious<cr>
 "nnoremap <silent> <ESC><C-S-l> :tabnext<cr>
-nnoremap <silent> <M-h> :bprevious<Enter>
-nnoremap <silent> <M-l> :bnext<Enter>
+nnoremap <silent> <M-h> :bprevious<cr>
+nnoremap <silent> <M-l> :bnext<cr>
+nnoremap <silent> <M-Left> :bprevious<cr>
+nnoremap <silent> <M-Right> :bnext<cr>
 
 " see:
 " https://codeburst.io/common-way-of-resizing-windows-panes-in-vim-and-tmux-9b88def886c6 
@@ -233,6 +235,10 @@ nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <C-Left> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-Down> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-Up> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-Right> :TmuxNavigateRight<cr>
 nnoremap <silent> <C-\> :TmuxNavigatePrevious<cr>
 
 "For vim-easymotion
