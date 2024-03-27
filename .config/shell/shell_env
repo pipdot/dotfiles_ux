@@ -56,26 +56,20 @@ export ASDF_CONFIG_FILE="~/.config/asdf/asdfrc"
 # Should also be sourced by non-interative shells!!
 # since it will be used to launch wlroots and other wms.
 # get powerline-status pipx package install folder
-get_pipx_package_location() {
-  echo $(pipx runpip $1 show $1 | grep -Po 'Location: \K.*')
-}
-get_pipx_venv_location() {
-  echo $(pipx environment | grep -Po 'PIPX_LOCAL_VENVS=\K.*')/$1
-}
-powerline_package="powerline-status"
-pipx_root=$(get_pipx_package_location $powerline_package)
-if ! [ -z $pipx_root ]; then
-  export POWERLINE_ROOT="$pipx_root/powerline"
+if command -v pipx &> /dev/null; then
+  get_pipx_package_location() {
+    echo $(pipx runpip $1 show $1 | grep -Po 'Location: \K.*')
+  }
+  get_pipx_venv_location() {
+    echo $(pipx environment | grep -Po 'PIPX_LOCAL_VENVS=\K.*')/$1
+  }
+  powerline_package="powerline-status"
+  pipx_root=$(get_pipx_package_location $powerline_package)
+  if ! [ -z $pipx_root ]; then
+    export POWERLINE_ROOT="$pipx_root/powerline"
+  fi
 fi
 
-
-# --------------------------------------------------------------------
-# Qt
-# --------------------------------------------------------------------
-# QT/Gnome/GTK theming stuff
-# export QT_QPA_PLATFORMTHEME='gnome'
-export QT_STYLE_OVERRIDE='kvantum'
-# source_shell_file "gtk_settings"
 # --------------------------------------------------------------------
 # Audio
 # for some reason one installation of Ardour doesn't look in user-installed lv2 dir.

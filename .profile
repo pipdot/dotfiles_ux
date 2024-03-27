@@ -23,4 +23,4 @@ source_shell_module() {
   done
 }
 
-source_shell_module "shell_env"
+source_shell_module "$SHELL_PROFILE_CONFIG_DIR/shell_env"
