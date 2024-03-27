@@ -1,15 +1,13 @@
 # Only source additions to $PATH
 # if the shell is non-interactive.
 [ -f "$HOME/.profile" ] && . "$HOME/.profile"
-# Also load bash-specific exports
-source_shell_module "bash/bash_exports"
 [ -z "$PS1" ] && return
 
 # for interactive shell
-source_shell_file "shell_rc"
-# module loading (Order matters) :ARCANE:
-source_shell_module "bash/bash_aliases" "bash/bash_functions" "bash/bash_keys" "bash/bash_browsing" "bash/bash_prompt"
-source_shell_file "bash/bash_completion"
+source_shell_file "$SHELL_PROFILE_CONFIG_DIR/shell_rc"
+# module loading (Order matters)
+source_shell_module "$SHELL_PROFILE_CONFIG_DIR/bash/modules"
+source_shell_file "$SHELL_PROFILE_CONFIG_DIR/bash/completion/bash_completion"
 
 # FIXME: RUN TMUX AT ALACRITTY STARTUP INSTEAD
 # Run tmux if found
