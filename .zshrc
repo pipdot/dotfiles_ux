@@ -9,7 +9,6 @@ export ZSH_ROOT="$HOME/.config/shell/zsh"
 export ZAP_ROOT="$HOME/.local/share/zap"
 # export ZSH="$ZSH_ROOT/oh-my-zsh"
 export ASDF_DIR="$HOME/.asdf"
-export ASDF_DIR="$HOME/.asdf"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
