@@ -8,6 +8,8 @@ source_shell_file "$SHELL_PROFILE_CONFIG_DIR/shell_rc"
 export ZSH_ROOT="$HOME/.config/shell/zsh"
 export ZAP_ROOT="$HOME/.local/share/zap"
 # export ZSH="$ZSH_ROOT/oh-my-zsh"
+export ASDF_DIR="$HOME/.asdf"
+export ASDF_DIR="$HOME/.asdf"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -103,7 +105,7 @@ compinit
 
 # must be after completion
 # and before autosuggestions and highlights
-plug "Aloxaf/fzf-tab"
+# plug "Aloxaf/fzf-tab"
 
 plug "zap-zsh/supercharge"
 # plug "zsh-users/zsh-syntax-highlighting"
@@ -120,8 +122,7 @@ plug "zap-zsh/vim"
 # this plug-in does it for us.
 # plug "kytta/ohmyzsh-key-bindings"
 plug "zpm-zsh/tmux"
-plug "Atlas34/fzf-plugin"
-plug "pschmitt/emoji-fzf.zsh"
+plug "unixorn/fzf-zsh-plugin"
 #
 # this one requires that compinit be called before and not after.
 # plug "zimfw/asdf"
@@ -142,6 +143,20 @@ plug "$ZSH_CUSTOM/zsh-fixkeys/fixkeys.plugin.zsh"
 #  use asdf-direnv?
 #
 # source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
+# Setup fzf
+# ---------
+if [[ ! "$PATH" == *${FZF_PATH}/bin* ]]; then
+  export PATH="$PATH:${FZF_PATH}/bin"
+fi
+
+# Auto-completion
+# ---------------
+[[ $- == *i* ]] && source "${FZF_PATH}/shell/completion.zsh" 2> /dev/null
+
+# Key bindings
+# ------------
+source "${FZF_PATH}/shell/key-bindings.zsh"
+
 
 # zmv
 # for future use,
