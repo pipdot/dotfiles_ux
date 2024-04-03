@@ -27,7 +27,7 @@ if empty($XDG_CONFIG_HOME) | let $XDG_CONFIG_HOME = $HOME."/.config"      | endi
 if empty($XDG_DATA_HOME)   | let $XDG_DATA_HOME   = $HOME."/.local/share" | endif
 if empty($XDG_STATE_HOME)  | let $XDG_STATE_HOME  = $HOME."/.local/state" | endif
 
-const s:myconfigdir=$XDG_CONFIG_HOME.'/vim'
+let s:myconfigdir=$XDG_CONFIG_HOME.'/vim'
 
 " runtime directory
 set runtimepath^=$XDG_CONFIG_HOME/vim
