@@ -16,7 +16,6 @@ source_shell_file() {
 }
 
 source_shell_module() {
-  echo "$@"
   for file in $@; do
     [ -f "${file}" ] && . "${file}"
     [ -f "${file}.user" ] && . "${file}.user"
