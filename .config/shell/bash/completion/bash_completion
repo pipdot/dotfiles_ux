@@ -8,7 +8,7 @@
 # bash_completion_file="/usr/share/bash-completion/bash_completion"
 # [[ -f "$bash_completion_file" ]] && . "$bash_completion_file"
 
-source_shell_module "bash/bash_completion_ext"
+source_shell_module "$SHELL_PROFILE_CONFIG_DIR/bash/bash_completion_ext"
 
 # ---------------
 # Enable fzf completion
