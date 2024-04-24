@@ -1,6 +1,16 @@
 ### Input configuration
 set $kb_layouts "fr,fr"
 set $kb_variants "bepo,oss"
+
+## Bind directions here
+# bindsym --to-code expects a 'code' relative
+# to the first layout.
+# In my case, that's bépo so 
+# Home row direction keys, like vim
+set $left c
+set $down t
+set $up s
+set $right r
 #
 # Example configuration:
 #
