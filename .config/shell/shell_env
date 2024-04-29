@@ -52,10 +52,21 @@ export ASDF_CONFIG_FILE="~/.config/asdf/asdfrc"
   # export FLUTTER_ROOT="$(asdf where flutter)"
 
 # --------------------------------------------------------------------
-# Powerline
+# PIP / PIPX (and Powerline)
 # Should also be sourced by non-interative shells!!
 # since it will be used to launch wlroots and other wms.
 # get powerline-status pipx package install folder
+export POWERLINE_USE_PIPX=0
+if command -v pip &> /dev/null; then
+  get_pip_package_location() {
+    echo $(pip show $1 | grep -Po 'Location: \K.*')
+  }
+  powerline_package="powerline-status"
+
+  if [ "$POWERLINE_USE_PIPX" = "0" ]; then
+    powerline_pip_root=$(get_pip_package_location $powerline_package)
+  fi
+fi
 if command -v pipx &> /dev/null; then
   get_pipx_package_location() {
     echo $(pipx runpip $1 show $1 | grep -Po 'Location: \K.*')
@@ -64,10 +75,13 @@ if command -v pipx &> /dev/null; then
     echo $(pipx environment | grep -Po 'PIPX_LOCAL_VENVS=\K.*')/$1
   }
   powerline_package="powerline-status"
-  pipx_root=$(get_pipx_package_location $powerline_package)
-  if ! [ -z $pipx_root ]; then
-    export POWERLINE_ROOT="$pipx_root/powerline"
+
+  if [ "$POWERLINE_USE_PIPX" = "1" ]; then
+    powerline_pip_root=$(get_pipx_package_location $powerline_package)
   fi
+fi
+if ! [ -z $powerline_pip_root ]; then
+  export POWERLINE_ROOT="$powerline_pip_root/powerline"
 fi
 
 # --------------------------------------------------------------------
