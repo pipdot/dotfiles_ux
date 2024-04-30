@@ -125,7 +125,7 @@ plug "unixorn/fzf-zsh-plugin"
 #
 # this one requires that compinit be called before and not after.
 # plug "zimfw/asdf"
-plug 'redxtech/zsh-asdf-direnv'
+# plug 'redxtech/zsh-asdf-direnv'
 #
 plug "mdumitru/git-aliases"
 plug "dashixiong91/zsh-vscode"
