@@ -27,3 +27,9 @@ modules:
     link: none
     location: ~/.local/share/zap
     name: zap
+  - repo: git@github.com:romkatv/zshi 
+    pull_only: true
+    mappings:
+        - match: 'zshi'
+          target_dir: ~/.local/bin/
+ 
