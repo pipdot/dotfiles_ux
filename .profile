@@ -15,4 +15,4 @@ source_shell_file() {
   done
 }
 
-source_shell_file "$SHELL_PROFILE_CONFIG_DIR/env/*"
+source_shell_file $SHELL_PROFILE_CONFIG_DIR/env/*
