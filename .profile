@@ -15,12 +15,4 @@ source_shell_file() {
   done
 }
 
-source_shell_module() {
-  for file in $@; do
-    [ -f "${file}" ] && . "${file}"
-    [ -f "${file}.user" ] && . "${file}.user"
-    [ -f "${file}.local" ] && . "${file}.local"
-  done
-}
-
-source_shell_module "$SHELL_PROFILE_CONFIG_DIR/shell_env"
+source_shell_file "$SHELL_PROFILE_CONFIG_DIR/env/*"

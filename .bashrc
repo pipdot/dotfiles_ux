@@ -6,7 +6,7 @@
 # for interactive shell
 source_shell_file "$SHELL_PROFILE_CONFIG_DIR/shell_rc"
 # module loading (Order matters)
-source_shell_module "$SHELL_PROFILE_CONFIG_DIR/bash/modules/*"
+source_shell_file "$SHELL_PROFILE_CONFIG_DIR/bash/modules/*"
 source_shell_file "$SHELL_PROFILE_CONFIG_DIR/bash/completion/bash_completion"
 
 # FIXME: RUN TMUX AT ALACRITTY STARTUP INSTEAD

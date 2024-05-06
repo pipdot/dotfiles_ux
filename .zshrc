@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # some stuff for interactive shells.
-source_shell_file "$SHELL_PROFILE_CONFIG_DIR/shell_rc"
+source_shell_file "$SHELL_PROFILE_CONFIG_DIR/rc/*"
 
 # Path to your oh-my-zsh installation.
 export ZSH_ROOT="$HOME/.config/shell/zsh"
