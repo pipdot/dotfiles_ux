@@ -96,6 +96,7 @@ source $ZAP_ROOT/zap.zsh
 #
 # plug-ins configuration
 TMUX_MOTD=false
+TMUX_AUTOSTART=false
 
 # Load and initialise completion system
 plug "zsh-users/zsh-completions"
