@@ -45,6 +45,22 @@ export GPG_TTY=$(tty)
 export VIMINIT="set nocp | source ${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc"
 
 # -------------------------------------------------------------------
+# SSH
+function is_ssh_session() {
+  # source: https://unix.stackexchange.com/a/9607  
+  if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+    SESSION_TYPE=remote/ssh
+    echo 1
+  # many other tests omitted
+  else
+    case $(ps -o comm= -p "$PPID") in
+      sshd|*/sshd) echo 1;;
+    esac
+  fi
+  echo 0
+}
+
+# -------------------------------------------------------------------
 # ASDF
 export ASDF_CONFIG_FILE="~/.config/asdf/asdfrc"
   # tell flutter where to find install
