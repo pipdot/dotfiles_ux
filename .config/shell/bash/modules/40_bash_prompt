@@ -9,10 +9,15 @@ setup_powerline() {
   if [[ ! -v POWERLINE_ROOT ]]; then
     return 1;
   fi
+  # see: https://github.com/powerline/powerline/issues/1291#issuecomment-293621179
+  # also see bash colours in asci codes
+  # here: https://misc.flogisoft.com/bash/tip_colors_and_formatting
+  # \e[48;5;(bg)m \e[38;5;fg;(font boldness)m TEXT
   command powerline-daemon -q
   export POWERLINE_BASH_CONTINUATION=1
   export POWERLINE_BASH_SELECT=1
   . "$POWERLINE_ROOT/bindings/bash/powerline.sh"
+
   return 0;
 }
 

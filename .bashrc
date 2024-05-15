@@ -1,9 +1,6 @@
-# Only source additions to $PATH
+# Only source additions to $PATH / env
 # if the shell is non-interactive.
-[ -f "$HOME/.profile" ] && . "$HOME/.profile"
+source "$HOME/.config/shell/env"
 [ -z "$PS1" ] && return
-
 # for interactive shell
-source_shell_file $SHELL_PROFILE_CONFIG_DIR/rc/*
-source_shell_file $SHELL_PROFILE_CONFIG_DIR/bash/modules/*
-source_shell_file "$SHELL_PROFILE_CONFIG_DIR/bash/completion/bash_completion"
+source "$HOME/.config/shell/bash/intv"

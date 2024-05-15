@@ -9,3 +9,10 @@ if [ $BASH_VERSINFO -ge 4 ]; then
   shopt -s globstar                            # ** enabled
   shopt -s autocd                              # Type the directory name and cd it
 fi
+
+# set echo-control-characters off
+# Vim mode and forward searching
+set editing-mode vi
+set show-all-if-ambiguous on
+set visible-stats on
+set page-completions off

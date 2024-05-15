@@ -1,0 +1,5 @@
+#!/bin/bash
+
+source "$SHELL_PROFILE_CONFIG_DIR/intv"
+source_shell_file $SHELL_PROFILE_CONFIG_DIR/bash/modules/*
+source "$SHELL_PROFILE_CONFIG_DIR/bash/completion/bash_completion"

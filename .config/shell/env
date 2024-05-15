@@ -1,12 +1,8 @@
-# .profile
-# First load system-wide profile
-# should be done automatically..
-# FIXME: but it's not, sooo..
-[ -f "/etc/profile" ] && . "/etc/profile"
 
 # note: no need to export it,
 # it only needs to be available in the following functions
 # which _are_ available in parent processes
+# this dir
 SHELL_PROFILE_CONFIG_DIR="$HOME/.config/shell"
 
 source_shell_file() {
@@ -15,4 +11,4 @@ source_shell_file() {
   done
 }
 
-source_shell_file $SHELL_PROFILE_CONFIG_DIR/env/*
+source_shell_file $SHELL_PROFILE_CONFIG_DIR/env.d/*
