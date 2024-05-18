@@ -1,8 +1,9 @@
 #!/bin/sh
-# this service is experimental and most setups should start pipewire as a user,
-# for further information, please refer to the handbook
-! [ -d /run/pipewire ] && install -m 755 -g _pipewire -o _pipewire -d /run/pipewire
-umask 002
-export PIPEWIRE_RUNTIME_DIR=/run/pipewire
-export XDG_STATE_HOME=/var/lib
-exec chpst -u _pipewire:_pipewire:audio:video pipewire
+
+[ -r ./conf ] && . ./conf
+
+if [ "${LOGGING_ENABLE}x" = "1x" -a -n "${LOG_LEVEL}" ]; then
+    export PIPEWIRE_DEBUG="${LOG_LEVEL}"
+fi
+
+exec pipewire ${OPTS:-} 2>&1

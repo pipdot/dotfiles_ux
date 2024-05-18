@@ -23,3 +23,4 @@ exec swayidle -w \
 # https://stackoverflow.com/a/68787102
 for_window [class=".*"] inhibit_idle fullscreen
 for_window [app_id=".*"] inhibit_idle fullscreen
+

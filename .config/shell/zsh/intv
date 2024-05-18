@@ -157,20 +157,6 @@ plug "$ZSH_CUSTOM/zsh-fixkeys/fixkeys.plugin.zsh"
 #  use asdf-direnv?
 #
 # source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
-# Setup fzf
-# ---------
-if [[ ! "$PATH" == *${FZF_PATH}/bin* ]]; then
-  export PATH="$PATH:${FZF_PATH}/bin"
-fi
-
-# Auto-completion
-# ---------------
-[[ $- == *i* ]] && source "${FZF_PATH}/shell/completion.zsh" 2> /dev/null
-
-# Key bindings
-# ------------
-source "${FZF_PATH}/shell/key-bindings.zsh"
-
 
 # zmv
 # for future use,

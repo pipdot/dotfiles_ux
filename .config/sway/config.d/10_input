@@ -1,4 +1,3 @@
-
 # uses variable defined in equivalent i3-common file.
 input "type:keyboard" {
   xkb_layout "$kb_layouts",

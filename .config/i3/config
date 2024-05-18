@@ -4,6 +4,7 @@
 #
 # Read `man 5 sway` for a complete reference.
 # include local and user config common with sway
-include ~/.config/i3-common/config.d/*
+include ~/.config/i3-common/config
 # include local and user config exclusive to i3
 include ~/.config/i3/config.d/*
+

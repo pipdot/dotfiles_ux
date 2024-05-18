@@ -1,10 +1,5 @@
 # requirements.in
-# see: https://stackoverflow.com/a/65666949
-# fixme: as of now, the powerline-status Pypi.org package is still at 2.7
-# see: https://github.com/powerline/powerline/issues/2116#issue-679048896
 # powerline-status
-# git+https://github.com/ph111p/powerline.git@develop
-# git+https://github.com/powerline/powerline.git@develop
 
 # install from void packages:
 # wlogout

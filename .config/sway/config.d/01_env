@@ -1,4 +1,3 @@
-
 set $imgviewer $imgviewer | swayimg
 set $menu $menu | xargs swaymsg exec --
 set $exitmenu wlogout

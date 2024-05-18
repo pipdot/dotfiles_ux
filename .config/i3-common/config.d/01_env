@@ -36,3 +36,4 @@ set $promptcolour "#18b218"
 set $opaquemode "opaque"
 set $opacityactive 0.98
 set $opacityinactive 0.85
+

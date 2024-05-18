@@ -3,3 +3,4 @@ output_name=eDP-1
 max_fps=60
 chooser_cmd=slurp -f %o -or
 chooser_type=simple
+

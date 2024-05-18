@@ -2,4 +2,6 @@
 # if the shell is non-interactive.
 source "$HOME/.config/shell/env"
 [ -z "$PS1" ] && return
-source "$HOME/.bashrc"
+# for interactive shell
+source "$HOME/.config/shell/bash/intv"
+
