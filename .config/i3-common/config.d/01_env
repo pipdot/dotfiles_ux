@@ -2,12 +2,12 @@
 #
 # Your preferred terminal emulator
 # FIXME: define a proper fallback terminal
-set $term alacritty
+# set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 # FIXME: use wofi in Sway
-set $menu rofi -show drun
+# set $menu rofi -show drun
 set $filer dolphin
 set $browser firefox
 #

@@ -1,0 +1,4 @@
+set $term xterm
+# Your preferred application launcher
+set $menu rofi -show drun
+

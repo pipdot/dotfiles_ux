@@ -1,7 +1,11 @@
-set $imgviewer $imgviewer | swayimg
-set $menu $menu | xargs swaymsg exec --
+set $term foot
+# Your preferred application launcher
+set $menu wofi --show drun
 set $exitmenu wlogout
 set $switchlayout "swaymsg 'input * xkb_switch_layout next'",
+# Note: pass the final command to swaymsg so that the resulting window can be opened
+# on the original workspace that the command was run on.
+set $imgviewer $imgviewer | swayimg
 
 # IMPORTANT: reminder NOT to put quotes in path vars of sway config.
 set $scriptdir ~/.config/sway/scripts
