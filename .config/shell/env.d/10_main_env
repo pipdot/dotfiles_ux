@@ -101,9 +101,12 @@ if ! [ -z $powerline_pip_root ]; then
 fi
 
 # --------------------------------------------------------------------
-# Audio
-# for some reason one installation of Ardour doesn't look in user-installed lv2 dir.
-export LV2_PATH="${LV2_PATH}:/usr/local/lib/lv2"
-#
+# AUDIO stuff
+# LV2
+# see: https://lv2plug.in/pages/filesystem-hierarchy-standard.html
+if [ -z "${LV2_PATH}" ]; then 
+    export LV2_PATH="$HOME/.lv2:/usr/local/lib/lv2:/usr/lib/lv2"
+fi
+
 
 # vim: ft=sh :
