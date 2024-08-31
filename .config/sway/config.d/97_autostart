@@ -4,4 +4,5 @@
 # TODO?
 # run pipewire and pipewire-pulse as user
 # launch pipewire-pulse with XDG autostart.
+exec wl-paste --watch cliphist store
 
