@@ -7,6 +7,8 @@ set $switchlayout "swaymsg 'input * xkb_switch_layout next'",
 # on the original workspace that the command was run on.
 set $imgviewer $imgviewer | swayimg
 
+set $menu-clipboard-pick cliphist list | wofi -S dmenu | cliphist decode | wl-copy
+set $menu-clipboard-delete cliphist list | wofi -S dmenu | cliphist delete
+
 # IMPORTANT: reminder NOT to put quotes in path vars of sway config.
 set $scriptdir ~/.config/sway/scripts
-

@@ -17,6 +17,11 @@ set $auxmod Mod1
     # Start your launcher
     bindsym $mod+d exec $menu
 
+    # Search clipboard history
+    bindsym $mod+p exec $menu-clipboard-pick
+    # Delete clipboard history
+    bindsym $mod+Shift+p exec $menu-clipboard-delete
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
