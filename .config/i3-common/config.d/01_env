@@ -11,7 +11,7 @@
 set $filer dolphin
 set $browser firefox
 #
-set $backgrounddir ~/.config/i3-common/backgrounds
+set $backgrounddir ~/.config/backgrounds
 #
 set $screenshotdir ~/screenshots
 
