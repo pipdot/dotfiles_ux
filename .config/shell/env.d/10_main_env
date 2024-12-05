@@ -61,16 +61,9 @@ function is_ssh_session() {
 }
 
 # SSH-AGENT
-if [ -x "$(command -v ssh-agent) &> /dev/null" ]; then
-  eval $(ssh-agent)
+if [ -x "$(command -v ssh-agent )" ]; then
+  eval $(ssh-agent) &> /dev/null
 fi
-
-# -------------------------------------------------------------------
-# ASDF
-export ASDF_CONFIG_FILE="~/.config/asdf/asdfrc"
-  # tell flutter where to find install
-  # annoying so disabled.
-  # export FLUTTER_ROOT="$(asdf where flutter)"
 
 # --------------------------------------------------------------------
 # PIP / PIPX (and Powerline)
