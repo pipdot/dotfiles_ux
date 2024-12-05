@@ -1,4 +1,4 @@
-#!/bin/sh
+  #!/bin/sh
 
 # Environment variables -----------------------------------------------
 # set XDG
@@ -26,7 +26,7 @@ export HISTSIZE=16384
 # local binaries
 export PATH="$HOME/.local/bin:$PATH"
 # runit user services
-export SVDIR="$HOME/.var/service"
+export SVDIR="$HOME/.config/service"
 
 
 # --------------------------------------------------------------------
@@ -59,6 +59,11 @@ function is_ssh_session() {
   fi
   echo 0
 }
+
+# SSH-AGENT
+if [ -x "$(command -v ssh-agent) &> /dev/null" ]; then
+  eval $(ssh-agent)
+fi
 
 # -------------------------------------------------------------------
 # ASDF
