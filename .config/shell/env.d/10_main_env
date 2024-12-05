@@ -62,7 +62,7 @@ function is_ssh_session() {
 
 # SSH-AGENT
 if [ -x "$(command -v ssh-agent )" ]; then
-  eval $(ssh-agent) &> /dev/null
+  eval "$(ssh-agent -s)" &> /dev/null
 fi
 
 # --------------------------------------------------------------------
