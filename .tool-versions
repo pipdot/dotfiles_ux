@@ -1,2 +1,3 @@
 direnv 2.34.0
-rust 1.73.0
+rust   1.73.0
+nodejs latest
