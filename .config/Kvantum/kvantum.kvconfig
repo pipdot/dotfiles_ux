@@ -1,6 +1,2 @@
 [General]
-theme=WhiteSurDark
-
-[Applications]
-Default=kdeconnect
-WhiteSurDark=kdeconnect
+theme=KvArcDark

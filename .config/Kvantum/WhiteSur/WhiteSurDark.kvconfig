@@ -105,7 +105,7 @@ progress.indicator.text.color=#ffffff
 [Hacks]
 transparent_ktitle_label=true
 transparent_dolphin_view=true
-transparent_pcmanfm_sidepane=true
+transparent_pcmanfm_sidepane=false
 blur_translucent=true
 transparent_menutitle=true
 respect_darkness=true
@@ -120,7 +120,7 @@ no_selection_tint=true
 normal_default_pushbutton=true
 single_top_toolbar=true
 tint_on_mouseover=0
-transparent_pcmanfm_view=true
+transparent_pcmanfm_view=false
 opaque_colors=false
 scroll_jump_workaround=false
 centered_forms=false
