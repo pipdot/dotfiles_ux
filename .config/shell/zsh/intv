@@ -147,7 +147,7 @@ plug "mdumitru/git-aliases"
 plug "dashixiong91/zsh-vscode"
 # fix del key and others
 plug "$ZSH_CUSTOM/zsh-fixkeys/fixkeys.plugin.zsh"
-plug "$ZSH_CUSTOM/mise-activate/mise-activate.zsh"
+# plug "$ZSH_CUSTOM/mise-activate/mise-activate.zsh"
 # this also work but zap complains about
 # it not being activated...
 # TODO: find out how to install plug-in from oh-my-zsh.
