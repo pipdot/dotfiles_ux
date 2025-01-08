@@ -63,7 +63,7 @@ if [ -x "$(command -v ssh-agent )" ]; then
 fi
 
 # --------------------------------------------------------------------
-# PIP / PIPX (and Powerline)
+# powerline
 # Should also be sourced by non-interative shells!!
 # since it will be used to launch wlroots and other wms.
 # FIXME: in debian (and maybe other distribs)
