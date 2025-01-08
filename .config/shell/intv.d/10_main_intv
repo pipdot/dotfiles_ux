@@ -69,12 +69,4 @@ export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border --inline-info'
 # FZF_ALT_C_OPTS=
 export FZF_TMUX_OPTS='-d 40%'
 
-# --------------------------------------------------------------------
-# Qt
-# --------------------------------------------------------------------
-# QT/Gnome/GTK theming stuff
-# export QT_QPA_PLATFORMTHEME='gnome'
-export QT_STYLE_OVERRIDE='kvantum'
-# source_shell_file "gtk_settings"
-
 # vim: ft=sh :

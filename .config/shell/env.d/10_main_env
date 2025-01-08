@@ -66,33 +66,21 @@ fi
 # PIP / PIPX (and Powerline)
 # Should also be sourced by non-interative shells!!
 # since it will be used to launch wlroots and other wms.
-# get powerline-status pipx package install folder
-export POWERLINE_USE_PIPX=0
-if command -v pip &> /dev/null; then
-  get_pip_package_location() {
-    echo $(pip show $1 | grep -Po 'Location: \K.*')
-  }
-  powerline_package="powerline-status"
-
-  if [ "$POWERLINE_USE_PIPX" = "0" ]; then
-    powerline_pip_root=$(get_pip_package_location $powerline_package)
+# FIXME: in debian (and maybe other distribs)
+#        there are separate packages for
+#        the python files and the shell files of powerline
+#        we need the shell files and in this case,
+#        we can’t rely on python to tell us where they are.
+powerline_root_distrib="/usr/share/powerline"
+if ! [ -z "$powerline_root_shell/integrantions/powerline.sh" ]; then
+  # DISTRIB INSTALL (for example through apt in debian)
+  export POWERLINE_ROOT="$powerline_root_distrib"
+elif command -v python3 &> /dev/null; then
+  # PYTHON INSTALL
+  powerline_root=$(python3 -c "import powerline as _; print(_.__path__[0])")
+  if ! [ -z $powerline_root ]; then
+    export POWERLINE_ROOT="$powerline_root"
   fi
-fi
-if command -v pipx &> /dev/null; then
-  get_pipx_package_location() {
-    echo $(pipx runpip $1 show $1 | grep -Po 'Location: \K.*')
-  }
-  get_pipx_venv_location() {
-    echo $(pipx environment | grep -Po 'PIPX_LOCAL_VENVS=\K.*')/$1
-  }
-  powerline_package="powerline-status"
-
-  if [ "$POWERLINE_USE_PIPX" = "1" ]; then
-    powerline_pip_root=$(get_pipx_package_location $powerline_package)
-  fi
-fi
-if ! [ -z $powerline_pip_root ]; then
-  export POWERLINE_ROOT="$powerline_pip_root/powerline"
 fi
 
 # --------------------------------------------------------------------
@@ -102,6 +90,15 @@ fi
 if [ -z "${LV2_PATH}" ]; then 
     export LV2_PATH="$HOME/.lv2:/usr/local/lib/lv2:/usr/lib/lv2"
 fi
+
+# --------------------------------------------------------------------
+# Qt
+# --------------------------------------------------------------------
+# QT/Gnome/GTK theming stuff
+# export QT_QPA_PLATFORMTHEME='gnome'
+export QT_STYLE_OVERRIDE='kvantum'
+# source_shell_file "gtk_settings"
+
 
 
 # vim: ft=sh :
