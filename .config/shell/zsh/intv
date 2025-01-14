@@ -175,7 +175,7 @@ alias gln='noglob zmv -W -p ln'
 # otherwise it won't work.
 if command -v powerline-daemon &> /dev/null; then
   powerline-daemon -q
-  source "${POWERLINE_ROOT}/bindings/zsh/powerline.zsh"
+  source "${POWERLINE_SHELL_ROOT}/bindings/zsh/powerline.zsh"
 fi
 # export MANPATH="/usr/local/man:$MANPATH"
 

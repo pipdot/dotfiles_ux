@@ -71,15 +71,18 @@ fi
 #        the python files and the shell files of powerline
 #        we need the shell files and in this case,
 #        we can’t rely on python to tell us where they are.
-powerline_root_distrib="/usr/share/powerline"
-if ! [ -z "$powerline_root_shell/integrantions/powerline.sh" ]; then
-  # DISTRIB INSTALL (for example through apt in debian)
-  export POWERLINE_ROOT="$powerline_root_distrib"
-elif command -v python3 &> /dev/null; then
+if command -v python3 &> /dev/null; then
   # PYTHON INSTALL
-  powerline_root=$(python3 -c "import powerline as _; print(_.__path__[0])")
-  if ! [ -z $powerline_root ]; then
-    export POWERLINE_ROOT="$powerline_root"
+  powerline_python_root=$(python3 -c "import powerline as _; print(_.__path__[0])")
+  if ! [ -z $powerline_python_root ]; then
+    export POWERLINE_PYTHON_ROOT="$powerline_python_root"
+    powerline_shell_root_distrib="/usr/share/powerline"
+    if ! [ -z "$powerline_shell_root_distrib/integrations/powerline.sh" ]; then
+      # DISTRIB INSTALL (for example through apt in debian)
+      export POWERLINE_SHELL_ROOT="$powerline_shell_root_distrib"
+    else
+      export POWERLINE_SHELL_ROOT="$POWERLINE_PYTHON_ROOT"
+    fi
   fi
 fi
 

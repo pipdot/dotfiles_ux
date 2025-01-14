@@ -6,7 +6,7 @@ setup_powerline() {
   if ! command -v powerline-daemon &> /dev/null ; then
     return 1;
   fi
-  if [[ ! -v POWERLINE_ROOT ]]; then
+  if [[ ! -v POWERLINE_SHELL_ROOT ]]; then
     return 1;
   fi
   # see: https://github.com/powerline/powerline/issues/1291#issuecomment-293621179
@@ -16,7 +16,7 @@ setup_powerline() {
   command powerline-daemon -q
   export POWERLINE_BASH_CONTINUATION=1
   export POWERLINE_BASH_SELECT=1
-  . "$POWERLINE_ROOT/bindings/bash/powerline.sh"
+  . "$POWERLINE_SHELL_ROOT/bindings/bash/powerline.sh"
 
   return 0;
 }
