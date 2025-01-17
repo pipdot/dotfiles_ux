@@ -77,7 +77,7 @@ if command -v python3 &> /dev/null; then
   if ! [ -z $powerline_python_root ]; then
     export POWERLINE_PYTHON_ROOT="$powerline_python_root"
     powerline_shell_root_distrib="/usr/share/powerline"
-    if ! [ -z "$powerline_shell_root_distrib/integrations/powerline.sh" ]; then
+    if [ -f "$powerline_shell_root_distrib/integrations/powerline.sh" ]; then
       # DISTRIB INSTALL (for example through apt in debian)
       export POWERLINE_SHELL_ROOT="$powerline_shell_root_distrib"
     else
