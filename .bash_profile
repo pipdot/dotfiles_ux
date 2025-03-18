@@ -1,7 +1,7 @@
-# Only source additions to $PATH / env
-# if the shell is non-interactive.
-source "$HOME/.config/shell/env"
-[ -z "$PS1" ] && return
-# for interactive shell
-source "$HOME/.config/shell/bash/intv"
+# .bash_profile
 
+# source login conf
+source "$HOME/.config/shell/login"
+
+# Get the aliases and functions
+[ -f $HOME/.bashrc ] && . $HOME/.bashrc

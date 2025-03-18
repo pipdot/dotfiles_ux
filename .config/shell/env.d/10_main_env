@@ -27,12 +27,6 @@ export HISTSIZE=16384
 export PATH="$HOME/.local/bin:$PATH"
 
 # --------------------------------------------------------------------
-# GPG
-# see: https://www.gnupg.org/documentation/manuals/gnupg/Invoking-GPG_002dAGENT.html
-# required line for GPG-Agent
-export GPG_TTY=$(tty)
-
-# --------------------------------------------------------------------
 # Vim
 # move vim's stuff out of $HOME
 # see: https://tlvince.com/vim-respect-xdg
@@ -56,11 +50,6 @@ function is_ssh_session() {
   fi
   echo 0
 }
-
-# SSH-AGENT
-if [ -x "$(command -v ssh-agent )" ]; then
-  eval "$(ssh-agent -s)" &> /dev/null
-fi
 
 # --------------------------------------------------------------------
 # powerline
@@ -101,7 +90,5 @@ fi
 # export QT_QPA_PLATFORMTHEME='gnome'
 export QT_STYLE_OVERRIDE='kvantum'
 # source_shell_file "gtk_settings"
-
-
 
 # vim: ft=sh :

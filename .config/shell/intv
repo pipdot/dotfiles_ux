@@ -1,6 +1,6 @@
 #!/bin/sh
 
 # This file should ONLY be sourced
-# by interactive shells.
+# by _interactive_ shells.
 
 source_shell_file $SHELL_PROFILE_CONFIG_DIR/intv.d/*

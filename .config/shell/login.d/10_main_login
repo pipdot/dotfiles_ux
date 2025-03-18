@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# --------------------------------------------------------------------
+# GPG
+# see: https://www.gnupg.org/documentation/manuals/gnupg/Invoking-GPG_002dAGENT.html
+# required line for GPG-Agent
+export GPG_TTY=$(tty)
+
+# --------------------------------------------------------------------
+# SSH-AGENT
+if [ -x "$(command -v ssh-agent )" ]; then
+  eval "$(ssh-agent -s)" &> /dev/null
+fi
+
+# vim: ft=sh :

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# This file should ONLY be sourced
+# by _login_ shells.
+
+source_shell_file $SHELL_PROFILE_CONFIG_DIR/login.d/*
