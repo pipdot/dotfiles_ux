@@ -1,6 +1,6 @@
 font "pango:$uifont" "$uifontvariant" $uifontsize
 # see: https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland
-exec_always ". ~/.config/shell/gtk_settings"
+exec_always ". ~/.config/gtk-3.0/import_gtk_settings"
 
 # Opacity
 # opacity set $opacityactive
