@@ -174,8 +174,9 @@ let mapleader = " "
 " noremap  <Right>  <NOP>
 nnoremap Q <Nop>
 
-nnoremap <silent> <F8> :TagbarToggle<Enter>
-nnoremap <silent> <F9> :NERDTreeToggle<Enter>
+nnoremap <Leader>n :NERDTreeFocusToggle<CR>
+nnoremap <silent> <F2> :NERDTreeToggle<CR>
+nnoremap <silent> <F3> :TagbarToggle<CR>
 try
 call togglebg#map("<F7>")
 catch
@@ -246,8 +247,8 @@ nnoremap <silent> <C-\> :TmuxNavigatePrevious<cr>
 map  <Leader>f <Plug>(easymotion-bd-f)
 nmap <Leader>f <Plug>(easymotion-overwin-f)
 
-" s{char}{char} to move to {char}{char}
-nmap s <Plug>(easymotion-overwin-f2)
+" <Leader>s{char}{char} to move to {char}{char}
+nmap <Leader>s <Plug>(easymotion-overwin-f2)
 
 " Move to line
 map <Leader>L <Plug>(easymotion-bd-jk)
@@ -258,7 +259,7 @@ map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 
 "Vimux
-map <Leader>rq :call VimuxRunCommand("clear; rspec " . bufname("%"), 0)<CR>
+"map <Leader>rq :call VimuxRunCommand("clear; rspec " . bufname("%"), 0)<CR>
 
 " vim-doge
 let g:doge_enable_mappings = 0
@@ -334,7 +335,11 @@ Plug 'jasonccox/vim-wayland-clipboard'
 " Vim stuff
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-abolish'
 Plug 'preservim/vimux'
+Plug 'preservim/tagbar'
+
+Plug 'jistr/vim-nerdtree-tabs'
 " Key-binding
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-unimpaired'
