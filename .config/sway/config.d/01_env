@@ -1,11 +1,11 @@
-set $term foot
+set $term alacritty || foot
 # Your preferred application launcher
 set $menu wofi --show drun
 set $exitmenu wlogout
 set $switchlayout "swaymsg 'input * xkb_switch_layout next'",
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $imgviewer $imgviewer | swayimg
+set $imgviewer $imgviewer || swayimg
 
 set $menu-clipboard-pick cliphist list | wofi -S dmenu | cliphist decode | wl-copy
 set $menu-clipboard-delete cliphist list | wofi -S dmenu | cliphist delete
