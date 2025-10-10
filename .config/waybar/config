@@ -89,8 +89,8 @@
 	"cpu": {
 		"interval": 5,
 		"tooltip": false,
-		"format": " {usage}%",
-		"format-alt": " {load}",
+		"format": "  {usage}%",
+		"format-alt": "  {load}",
 		"states": {
 			"warning": 70,
 			"critical": 90
@@ -98,7 +98,7 @@
 	},
 
 	"sway/language": {
-		"format": " {short}({variant})",
+		"format": "  {short}({variant})",
 		"min-length": 5,
 		"on-click": "swaymsg 'input * xkb_switch_layout next'",
 		"tooltip": false
@@ -112,14 +112,14 @@
         "capslock": "C {icon}"
     },
     "format-icons": {
-        "locked": "",
-        "unlocked": ""
+        "locked": " ",
+        "unlocked": " "
     }
 	},
 
 	"memory": {
 		"interval": 5,
-		"format": " {used:0.1f}G/{total:0.1f}G",
+		"format": "🖥 {used:1.1f}G/{total:0.1f}G",
 		"states": {
 			"warning": 70,
 			"critical": 90
@@ -129,12 +129,12 @@
 
 	"network": {
 		"interval": 5,
-		"format-wifi": " {essid} ({signalStrength}%)",
-		"format-ethernet": " {ifname}",
+		"format-wifi": "  {essid} ({signalStrength}%)",
+		"format-ethernet": "🖧  {ifname}",
 		"format-disconnected": "",
 		"format-disabled": "",
 		"format-alt": "↑ {bandwidthUpOctets} ↓ {bandwidthDownOctets}",
-		// "format-alt": " {ipaddr}/{cidr}",
+		//"format-alt": "🠶 {ipaddr}/{cidr}",
 		"tooltip": false
 	},
 

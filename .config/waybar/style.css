@@ -229,103 +229,103 @@
 }
 
 #custom-arrow-left1 {
-	font-size: 11pt;
+	font-size: 14pt;
 	color: @sound;
 	background: transparent;
 }
 
 #custom-arrow-left2 {
-	font-size: 11pt;
+	font-size: 14pt;
 	color: @network;
 	background: @sound;
 }
 
 #custom-arrow-left3 {
-	font-size: 11pt;
+	font-size: 14pt;
 	color: @memory;
 	background: @bluetooth;
 }
 
 #custom-arrow-left4 {
-	font-size: 11pt;
+	font-size: 14pt;
 	color: @cpu;
 	background: @memory;
 }
 
 #custom-arrow-left5 {
-	font-size: 11pt;
+	font-size: 14pt;
 	color: @temp;
 	background: @cpu;
 }
 
 #custom-arrow-left6 {
-	font-size: 11pt;
+	font-size: 14pt;
 	color: @battery;
 	background: @temp;
 }
 
 #custom-arrow-left7 {
-	font-size: 11pt;
+	font-size: 14pt;
 	color: @layout;
 	background: @battery;
 }
 
 #custom-arrow-left8 {
-	font-size: 11pt;
+	font-size: 14pt;
 	color: @date;
 	background: @layout;
 }
 
 #custom-arrow-left9 {
-	font-size: 11pt;
+	font-size: 14pt;
 	color: @time;
 	background: @date;
 }
 
 #custom-arrow-left10 {
-	font-size: 11pt;
+	font-size: 14pt;
 	color: @date;
 	background: @battery;
 }
 
 #custom-arrow-left11 {
-	font-size: 11pt;
+	font-size: 14pt;
 	color: @bluetooth;
 	background: @network;
 }
 
 #custom-arrow-left12 {
-	font-size: 11pt;
+	font-size: 14pt;
 	color: @player;
 	background: transparent;
 }
 
 #custom-arrow-right1 {
-	font-size: 11pt;
+	font-size: 14pt;
 	color: @unfocused;
 	background: @tray;
 }
 
 #custom-arrow-right2 {
-	font-size: 11pt;
+	font-size: 14pt;
 	color: @layout;
 	background: @keyboard-state;
 }
 
 #custom-arrow-right3 {
-	font-size: 11pt;
+	font-size: 14pt;
 	color: @keyboard-state;
 	background: @unfocused;
 }
 
 #custom-arrow-right4 {
-	font-size: 11pt;
+	font-size: 14pt;
 	color: @player;
 	background: transparent;
 }
 
 #custom-arrow-right5 {
-	font-size: 11pt;
+	font-size: 14pt;
 	color: @tray;
 	background: transparent;
 }
