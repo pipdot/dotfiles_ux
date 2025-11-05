@@ -1,9 +1,3 @@
-mappings:
-  - match: .bash(\w)*
-    target_os:
-      - "Linux"
-      - "Darwin"
-
 modules:
   # other useful stuff
   - repo: git@github.com:tmux-plugins/tpm.git
