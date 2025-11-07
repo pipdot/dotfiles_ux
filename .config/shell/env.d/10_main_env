@@ -1,1 +1,94 @@
-/home/pip/.config/dfm/profiles/piptouque_ux/.config/dfm/profiles/piptouque_ux/.config/shell/env.d/10_main_env
+  #!/bin/sh
+
+# Environment variables -----------------------------------------------
+# set XDG
+# see specification
+# at: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
+#
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_CACHE_HOME=$HOME/.var/cache
+export XDG_STATE_HOME=$HOME/.var/state
+export XDG_RUNTIME_HOME=$HOME/.var/run
+# More needed for default Mopidy config to work..
+export XDG_CONFIG_DIR=$XDG_CONFIG_HOME
+export XDG_DATA_DIR=$XDG_DATA_HOME
+export XDG_CACHE_DIR=$XDG_CACHE_HOME
+
+# Preferred character encoding
+# export LANG=en_US.utf-8
+
+export EDITOR=vim
+export HISTCONTROL=ignoreboth
+# 16 KiL
+export HISTSIZE=16384
+#
+# local binaries
+export PATH="$HOME/.local/bin:$PATH"
+
+# --------------------------------------------------------------------
+# Vim
+# move vim's stuff out of $HOME
+# see: https://tlvince.com/vim-respect-xdg
+# and: https://blog.joren.ga/vim-xdg
+# move vimrc to ~/.config/vim/vimrc and redirect vim to it at launch.
+# export VIMINIT='let $MYVIMRC="${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc" | source $MYVIMRC'
+export VIMINIT="set nocp | source ${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc"
+
+# -------------------------------------------------------------------
+# SSH
+function is_ssh_session() {
+  # source: https://unix.stackexchange.com/a/9607  
+  if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+    SESSION_TYPE=remote/ssh
+    echo 1
+  # many other tests omitted
+  else
+    case $(ps -o comm= -p "$PPID") in
+      sshd|*/sshd) echo 1;;
+    esac
+  fi
+  echo 0
+}
+
+# --------------------------------------------------------------------
+# powerline
+# Should also be sourced by non-interative shells!!
+# since it will be used to launch wlroots and other wms.
+# FIXME: in debian (and maybe other distribs)
+#        there are separate packages for
+#        the python files and the shell files of powerline
+#        we need the shell files and in this case,
+#        we can’t rely on python to tell us where they are.
+if command -v python3 &> /dev/null; then
+  # PYTHON INSTALL
+  powerline_python_root=$($SHELL_PROFILE_CONFIG_DIR/utils/get_powerline_path 2>&1)
+  if ! [ -z $powerline_python_root ]; then
+    export POWERLINE_PYTHON_ROOT="$powerline_python_root"
+    powerline_shell_root_distrib="/usr/share/powerline"
+    if [ -f "$powerline_shell_root_distrib/integrations/powerline.sh" ]; then
+      # DISTRIB INSTALL (for example through apt in debian)
+      export POWERLINE_SHELL_ROOT="$powerline_shell_root_distrib"
+    else
+      export POWERLINE_SHELL_ROOT="$POWERLINE_PYTHON_ROOT"
+    fi
+  fi
+fi
+
+# --------------------------------------------------------------------
+# AUDIO stuff
+# LV2
+# see: https://lv2plug.in/pages/filesystem-hierarchy-standard.html
+if [ -z "${LV2_PATH}" ]; then 
+    export LV2_PATH="$HOME/.lv2:/usr/local/lib/lv2:/usr/lib/lv2"
+fi
+
+# --------------------------------------------------------------------
+# Qt
+# --------------------------------------------------------------------
+# QT/Gnome/GTK theming stuff
+# export QT_QPA_PLATFORMTHEME='gnome'
+export QT_STYLE_OVERRIDE='kvantum'
+# source_shell_file "gtk_settings"
+
+# vim: ft=sh :

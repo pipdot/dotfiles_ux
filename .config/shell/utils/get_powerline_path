@@ -1,1 +1,14 @@
-/home/pip/.config/dfm/profiles/piptouque_ux/.config/dfm/profiles/piptouque_ux/.config/shell/utils/get_powerline_path
+#!/bin/env python3
+
+import sys
+
+def get_powerline_path() -> str:
+    try:
+        import powerline as _
+        return _.__path__[0]
+    except ModuleNotFoundError:
+        return ''
+
+if __name__ == "__main__":
+    sys.exit(get_powerline_path())
+
