@@ -62,8 +62,8 @@ function is_ssh_session() {
 #        we can’t rely on python to tell us where they are.
 if command -v python3 &> /dev/null; then
   # PYTHON INSTALL
-  powerline_python_root=$($SHELL_PROFILE_CONFIG_DIR/utils/get_powerline_path 2>&1)
-  if ! [ -z $powerline_python_root ]; then
+  powerline_python_root=$("$SHELL_PROFILE_CONFIG_DIR/utils/get_powerline_path" 2>&1)
+  if ! [ -z "$powerline_python_root" ]; then
     export POWERLINE_PYTHON_ROOT="$powerline_python_root"
     powerline_shell_root_distrib="/usr/share/powerline"
     if [ -f "$powerline_shell_root_distrib/integrations/powerline.sh" ]; then
