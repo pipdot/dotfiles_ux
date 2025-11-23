@@ -19,6 +19,7 @@ export XDG_CACHE_DIR=$XDG_CACHE_HOME
 # export LANG=en_US.utf-8
 
 export EDITOR=vim
+export VISUAL=vim
 export HISTCONTROL=ignoreboth
 # 16 KiL
 export HISTSIZE=16384
