@@ -1,9 +1,9 @@
 modules:
   # other useful stuff
-  - repo: git@github.com:tmux-plugins/tpm.git
+  - repo: git@github.com:RyanMacG/tpm-redux.git
     pull_only: true
     link: none
-    location: ~/.config/tmux/plugins/tpm
+    location: ~/.tmux/plugins/tpm-redux
     name: tpm
   - repo: git@github.com:junegunn/vim-plug.git
     pull_only: true
