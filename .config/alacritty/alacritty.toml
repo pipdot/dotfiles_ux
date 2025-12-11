@@ -1,3 +1,4 @@
+[general]
 import = ["/home/pip/.config/alacritty/font.toml", "/home/pip/.config/alacritty/alacritty.local.yml", "/home/pip/.config/alacritty/font.local.yml"]
 live_config_reload = true
 
@@ -403,6 +404,7 @@ mouse = "Right"
 [scrolling]
 history = 0
 
-[shell]
-args = ["new", "-As0"]
-program = "tmux"
+#[terminal.shell]
+#args = ["new", "-As0"]
+#program = "tmux"
+

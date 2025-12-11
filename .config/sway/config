@@ -3,6 +3,10 @@
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
+#
+# include system-wide config exclusive to sway
+# Needed to set-up dbus in Ubuntu 24.04
+include /etc/sway/config.d/*
 # include local and user config common with i3
 include ~/.config/i3-common/config
 # include local and user config exclusive to sway

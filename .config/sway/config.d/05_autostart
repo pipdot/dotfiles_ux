@@ -4,5 +4,9 @@
 # TODO?
 # run pipewire and pipewire-pulse as user
 # launch pipewire-pulse with XDG autostart.
+#
+# Watch clipboard
 exec wl-paste --watch cliphist store
+# enable the awww daemon (wallpaper)
+# exec awww-daemon
 

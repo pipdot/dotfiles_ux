@@ -7,3 +7,4 @@
 # echo $TERMINAL_RUN_COMMAND "$@"
 # IMPORTANT: .desktop files do not like for "tmux new" to be quoted
 exec $TERMINAL_RUN_COMMAND tmux new "$@"
+
