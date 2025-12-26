@@ -1,0 +1,40 @@
+# Note: inherits from ~/.config/i3-common config
+### Key bindings
+#
+# Basics:
+#
+    # Note: workspaces can have any name you want, not just numbers.
+    # We just use 1-10 as the default.
+    # Create workspaces if they don't exist while moving.
+    # from: https://old.reddit.com/r/swaywm/comments/pe5ipl/workspace_next_or_new/hswr4bf/
+    set $next_or_new swaymsg -r -t get_workspaces | jq -r --arg OUTPUT $(swaymsg -t get_outputs -r | jq -r '.[] | select(.focused == true) | .name') '(. | (max_by(.num) | .num)) as $max | [.[] | select(.output == $OUTPUT)] | (max_by(.num) | .num) as $maxOutput | (.[] | select(.focused == true) | .num) as $current | if $maxOutput > $current then "next_on_output" else $max + 1 end'
+    set $previous_or_first swaymsg -r -t get_workspaces | jq -r --arg OUTPUT $(swaymsg -t get_outputs -r | jq -r '.[] | select(.focused == true) | .name') '(. | (max_by(.num) | .num)) as $max | [.[] | select(.output == $OUTPUT)] | (min_by(.num) | .num) as $minOutput | (.[] | select(.focused == true) | .num) as $current | if $minOutput < $current then "prev_on_output" else $current end'
+    #
+    bindsym --to-code $mod+$auxmod+$up exec swaymsg "workspace $($previous_or_first)"
+    bindsym --to-code $mod+$auxmod+$down exec swaymsg "workspace $($next_or_new)"
+    bindsym --to-code $mod+$auxmod+Shift+$up exec swaymsg "move container to workspace $($previous_or_first), workspace prev_on_output"
+    bindsym --to-code $mod+$auxmod+Shift+$down exec swaymsg "move container to workspace $($next_or_new), workspace next_on_output"
+    # arrow keys now
+    bindsym --to-code $mod+$auxmod+up exec swaymsg "workspace $($previous_or_first)"
+    bindsym --to-code $mod+$auxmod+down exec swaymsg "workspace $($next_or_new)"
+    bindsym --to-code $mod+$auxmod+Shift+up exec swaymsg "move container to workspace $($previous_or_first), workspace prev_on_output"
+    bindsym --to-code $mod+$auxmod+Shift+down exec swaymsg "move container to workspace $($next_or_new), workspace next_on_output"
+#
+# Scratchpad:
+#
+    # Sway has a "scratchpad", which is a bag of holding for windows.
+    # You can send windows there and get them back later.
+
+    # Move the currently focused window to the scratchpad
+    bindsym $mod+Shift+minus move scratchpad
+
+    # Show the next scratchpad window or hide the focused scratchpad window.
+    # If there are multiple scratchpad windows, this command cycles through them.
+    bindsym $mod+minus scratchpad show
+# Opacity (if applicable)
+# TODO: use something other than a mode for this.
+# mode $opaquemode {
+#     bindsym $mod+o mode "default"
+# }
+# bindsym $mod+o mode $opaquemode
+
