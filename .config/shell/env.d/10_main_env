@@ -1,4 +1,4 @@
-  #!/bin/sh
+#!/bin/sh
 
 # Environment variables -----------------------------------------------
 # set XDG
@@ -28,6 +28,14 @@ export HISTSIZE=16384
 export PATH="$HOME/.local/bin:$PATH"
 
 # --------------------------------------------------------------------
+# Dotfile management
+export DOTFILE_DIR="$HOME/.local/share/dotfile_management/dotfiles"
+# Modules are third-party packages needed by my config (plug for zsh, tpm for tmux, etc.)
+# They are copied to specific directories, not $HOME
+export DOTFILE_MODULE_DIR="$HOME/.local/share/dotfile_management/modules"
+
+
+# --------------------------------------------------------------------
 # Vim
 # move vim's stuff out of $HOME
 # see: https://tlvince.com/vim-respect-xdg
@@ -39,7 +47,7 @@ export VIMINIT="set nocp | source ${XDG_CONFIG_HOME:-$HOME/.config}/vim/vimrc"
 # -------------------------------------------------------------------
 # SSH
 function is_ssh_session() {
-  # source: https://unix.stackexchange.com/a/9607  
+  # source: https://unix.stackexchange.com/a/9607
   if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
     SESSION_TYPE=remote/ssh
     echo 1

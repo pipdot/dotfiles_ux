@@ -7,5 +7,3 @@ source "$HOME/.config/shell/env"
 # for interactive shell
 source "$HOME/.config/shell/bash/intv"
 
-
-. "$HOME/.local/share/../bin/env"

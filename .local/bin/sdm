@@ -1,0 +1,31 @@
+#!/bin/env sh
+
+_sdm__add_repo() {
+  git clone $1 "${DOTFILE_DIR}/$2"
+}
+_sdm__add_module() {
+  git clone $1 "${DOTFILE_MODULE_DIR}/$2"
+}
+
+_sdm__link_repo() {
+  stow -d "${DOTFILE_DIR}" -t "${HOME}" --no-folding --override='.*\.user$' --ignore='.*\.dfm\.yml$' --verbose=1 $@
+}
+sdm() {
+  local cmdname=$1; shift
+  if [ "$cmdname" = "add" ]; then
+    local subcmdname=$1; shift
+    if [ "$subcmdname" = "repo" ]; then
+      _sdm__add_repo $@
+    elif [ "$subcmdname" = "module" ]; then
+      _sdm__add_module $@
+    fi
+  elif [ "$cmdname" = "link" ]; then
+    local subcmdname=$1; shift
+    if [ "$subcmdname" = "repo" ]; then
+      _sdm__link_repo $@
+    fi
+  fi
+}
+
+sdm $@
+
